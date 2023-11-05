@@ -1,0 +1,29 @@
+{
+  "name": "fenom-tmlanguage",
+  "version": "1.0.0",
+  "description": "TextMate grammar files for Fenom template engine syntax for VS Code, Sublime Text, and Atom",
+  "author": {
+    "name": "Gulomov Bakhtovar",
+    "email": "gulomovcreative@gmail.com"
+  },
+  "main": "index.js",
+  "exports": {
+    ".": "./fenom.tmLanguage.json"
+  },
+  "scripts": {
+    "publish:major": "npm version major",
+    "publish:minor": "npm version minor",
+    "publish:patch": "npm version patch",
+    "postversion": "git push && git push --tags && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GulomovCreative/fenom-tmlanguage.git"
+  },
+  "keywords": [
+    "fenom",
+    "TextMate",
+    "syntax"
+  ],
+  "license": "MIT"
+}
