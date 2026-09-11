@@ -39,13 +39,16 @@
 #^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
 # ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
 #  ^^^ text.html.fenom source.fenom variable.other.fenom variable.other.fenom
-#     ^^^^^^^ text.html.fenom source.fenom
+#     ^ text.html.fenom source.fenom
+#      ^ text.html.fenom source.fenom constant.numeric.decimal.fenom
+#       ^^^^^ text.html.fenom source.fenom
 #            ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
 >{$foo.5}
 #^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
 # ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
 #  ^^^ text.html.fenom source.fenom variable.other.fenom variable.other.fenom
-#     ^^ text.html.fenom source.fenom
+#     ^ text.html.fenom source.fenom
+#      ^ text.html.fenom source.fenom constant.numeric.decimal.fenom
 #       ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
 >{$foo[$bar]}
 #^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
@@ -85,10 +88,14 @@
 #  ^^^ text.html.fenom source.fenom variable.other.fenom variable.other.fenom
 #     ^^ text.html.fenom source.fenom variable.other.fenom keyword.operator.fenom
 #       ^^^ text.html.fenom source.fenom variable.other.fenom variable.other.property.fenom
-#          ^^^ text.html.fenom source.fenom
+#          ^ text.html.fenom source.fenom
+#           ^ text.html.fenom source.fenom constant.numeric.decimal.fenom
+#            ^ text.html.fenom source.fenom
 #             ^^ text.html.fenom source.fenom variable.other.fenom keyword.operator.fenom
 #               ^^^ text.html.fenom source.fenom variable.other.fenom variable.other.property.fenom
-#                  ^^^^^ text.html.fenom source.fenom
+#                  ^ text.html.fenom source.fenom
+#                   ^^^ text.html.fenom source.fenom constant.numeric.float.fenom
+#                      ^ text.html.fenom source.fenom
 #                       ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
 >{$.get.debug}
 #^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
