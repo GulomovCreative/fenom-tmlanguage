@@ -10,11 +10,14 @@
   "exports": {
     ".": "./index.js",
     "./fenom.tmLanguage.json": "./fenom.tmLanguage.json",
+    "./language-configuration.json": "./language-configuration.json",
     "./package.json": "./package.json"
   },
   "files": [
     "index.js",
-    "fenom.tmLanguage.json"
+    "fenom.tmLanguage.json",
+    "language-configuration.json",
+    "CHANGELOG.md"
   ],
   "scripts": {
     "test": "npm run test:snapshots && npm run test:nesting",

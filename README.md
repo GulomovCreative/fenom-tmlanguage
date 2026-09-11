@@ -1,12 +1,80 @@
 # fenom-tmlanguage
 
-This repository contains TmLanguage files that can be consumed by [Fenom](https://github.com/fenom-template/fenom) editors and plugins such as [Visual Studio Code](https://github.com/Microsoft/vscode), [Sublime Text](https://www.sublimetext.com), [Atom](https://atom.io), and possibly others.
+A TextMate grammar for the [Fenom](https://github.com/fenom-template/fenom)
+template engine, for editors and plugins that consume TextMate grammars.
+
+The grammar is an injection over HTML: markup in a `.tpl` file is highlighted by
+the editor's own HTML grammar — including CSS in `<style>` and JavaScript in
+`<script>` — and Fenom tags are highlighted on top of it, wherever they appear.
 
 ## Installation
 
 ``` sh
 npm install fenom-tmlanguage
 ```
+
+The package exposes the grammar three ways:
+
+``` js
+const grammarPath = require('fenom-tmlanguage')            // absolute path to the .json
+const grammar = require('fenom-tmlanguage/fenom.tmLanguage.json')
+const config = require('fenom-tmlanguage/language-configuration.json')
+```
+
+## Usage
+
+### Visual Studio Code
+
+VS Code reads this format directly. In an extension, register the language and
+point at the two files:
+
+``` json
+{
+  "contributes": {
+    "languages": [
+      {
+        "id": "fenom",
+        "aliases": ["Fenom"],
+        "extensions": [".tpl"],
+        "configuration": "./node_modules/fenom-tmlanguage/language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "fenom",
+        "scopeName": "text.html.fenom",
+        "path": "./node_modules/fenom-tmlanguage/fenom.tmLanguage.json",
+        "embeddedLanguages": {
+          "source.fenom": "fenom",
+          "text.html": "html"
+        }
+      }
+    ]
+  }
+}
+```
+
+Copying the two files into the extension at build time works as well; the paths
+above are what `require` resolves to.
+
+`language-configuration.json` sets `{*` and `*}` as the block comment, so
+toggling a comment produces Fenom's comment rather than an HTML one — the
+difference matters, because a Fenom comment is stripped at compile time and
+never reaches the browser.
+
+### Sublime Text
+
+Sublime does not load `.tmLanguage.json`. It reads `.sublime-syntax` (YAML) and
+the legacy `.tmLanguage` (a Property List), so the grammar has to be converted
+first — [PackageDev](https://github.com/SublimeText/PackageDev) converts between
+JSON, YAML and Property List. See
+[Syntax Definitions](https://www.sublimetext.com/docs/syntax.html) for which
+formats are supported.
+
+### Atom
+
+Atom's grammar loader accepted this format, but GitHub archived Atom in December
+2022 and it no longer receives updates.
 
 ## Development
 
@@ -34,6 +102,7 @@ Run `npm run test:update` only once you have checked the diff and confirmed the
 new scopes are the intended ones — then commit the updated `.snap` files
 alongside the grammar change.
 
-The fixtures deliberately include syntax the grammar does not handle correctly
-yet, so the snapshots record the current behaviour rather than the desired one.
-That is what makes a fix visible as a diff.
+The snapshots record what the grammar currently does, not what it ought to do.
+Some fixtures are deliberately invalid Fenom — `{$5foo}`, `{if:i $cdn}`,
+`{$value@key}` — and are there to pin down that the grammar does *not* dress
+them up as valid syntax.
