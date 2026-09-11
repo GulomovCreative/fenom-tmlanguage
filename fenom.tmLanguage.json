@@ -29,7 +29,7 @@
       "patterns": [
         {
           "comment": "A brace is literal text when the next character is whitespace or a closing brace: Fenom's lexer checks for exactly \\n, \\r, \\t, space and } before treating a brace as the start of a tag.",
-          "match": "(\\{%?)[\\s}]"
+          "match": "(\\{)[\\s}]"
         }
       ]
     },
@@ -56,18 +56,18 @@
       ]
     },
     "comments": {
-      "begin": "{{?\\*",
+      "begin": "\\{\\*",
       "beginCaptures": {
         "0": { "name": "punctuation.definition.comment.begin.fenom" }
       },
       "name": "comment.block.fenom",
-      "end": "\\*}}?",
+      "end": "\\*\\}",
       "endCaptures": {
         "0": { "name": "punctuation.definition.comment.end.fenom" }
       },
       "patterns": [
         {
-          "match": "{{?\\*",
+          "match": "\\{\\*",
           "name": "invalid.illegal.characters-not-allowed-here.fenom"
         }
       ]
@@ -75,13 +75,13 @@
     "blocks": {
       "patterns": [
         {
-          "begin": "(\\{%?)",
+          "begin": "(\\{)",
           "beginCaptures": {
             "1": {
                 "name": "punctuation.section.embedded.begin.fenom"
             }
           },
-          "end": "(%?\\})",
+          "end": "(\\})",
           "endCaptures": {
             "1": {
                 "name": "punctuation.section.embedded.end.fenom"
