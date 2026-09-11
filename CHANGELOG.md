@@ -5,7 +5,7 @@ All notable changes to this project are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [2.0.0] — 2026-09-11
 
 ### Breaking
 
@@ -46,8 +46,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   the `{ignore}` tag does, up to the matching closing tag.
 - `meta.embedded.block` and `meta.embedded.line` scopes marking tag bodies and
   interpolations as embedded regions.
-- A snapshot test suite and a nesting suite that checks the grammar against a
-  real HTML grammar with CSS and JavaScript inside it, plus CI running both on
+- Three test suites — snapshots of every token's scope, a nesting suite that
+  checks the grammar against a real HTML grammar with CSS and JavaScript inside
+  it, and integrity checks on the grammar file — plus CI running all of them on
   Node 18, 20 and 22.
 
 ### Fixed
@@ -83,3 +84,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   `postversion` publishes before it pushes.
 - `files` restricts the published package to the grammar, the language
   configuration and the entry point.
+
+## [1.0.0] — 2023-11-05
+
+Initial release. It was published to npm but never tagged in git, so the link
+below points at the commit it was cut from.
+
+[2.0.0]: https://github.com/GulomovCreative/fenom-tmlanguage/compare/0cea81a1afde02559372eedf5f27992e431f3315...v2.0.0
+[1.0.0]: https://github.com/GulomovCreative/fenom-tmlanguage/commit/0cea81a1afde02559372eedf5f27992e431f3315
