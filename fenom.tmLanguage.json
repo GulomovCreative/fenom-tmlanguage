@@ -87,7 +87,8 @@
                 "name": "punctuation.section.embedded.end.fenom"
             }
           },
-          "name": "source.fenom",
+          "comment": "A tag is an island of Fenom inside an HTML document, so it carries meta.embedded.block alongside source.fenom: the meta scope is what marks the region as embedded, and source.fenom is kept so that anything already targeting it keeps working. Block rather than line because a tag may span several lines -- the documentation shows multi-line {include} and {foreach} tags.",
+          "name": "meta.embedded.block.fenom source.fenom",
           "patterns": [
             {
               "include": "#expression"
@@ -292,7 +293,7 @@
                   "name": "punctuation.section.embedded.end.fenom"
                 }
               },
-              "name": "source.fenom",
+              "name": "meta.embedded.line.fenom source.fenom",
               "patterns": [
                 {
                   "include": "#expression"
