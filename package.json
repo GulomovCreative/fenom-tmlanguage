@@ -8,13 +8,19 @@
   },
   "main": "index.js",
   "exports": {
-    ".": "./fenom.tmLanguage.json"
+    ".": "./index.js",
+    "./fenom.tmLanguage.json": "./fenom.tmLanguage.json",
+    "./package.json": "./package.json"
   },
+  "files": [
+    "index.js",
+    "fenom.tmLanguage.json"
+  ],
   "scripts": {
     "publish:major": "npm version major",
     "publish:minor": "npm version minor",
     "publish:patch": "npm version patch",
-    "postversion": "git push && git push --tags && npm publish"
+    "postversion": "npm publish && git push && git push --tags"
   },
   "repository": {
     "type": "git",
