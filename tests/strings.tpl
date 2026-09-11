@@ -13,6 +13,9 @@
 {'Hi, $foo'}
 {'Hi, {$foo}'}
 {'Hi, {$user.name|up}'}
+{"hex \x41 and octal \101"}
+{"{foo} is literal text, only {$foo} interpolates"}
+<a href="/users/{$user_id}">{$user_name}</a>
 {$foo|upper}
 {$foo|lower}
 {$looong|truncate:80:"..."}
