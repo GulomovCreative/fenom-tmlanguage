@@ -1,0 +1,11 @@
+<div class="user {$cls}">Hello, <a href="/u/{$user.id}">{$user.name|upper}</a></div>
+<style>
+h1 { color: {$theme.color}; }
+.plain { font-size: 12px; }
+</style>
+<script>
+var n = {$count};
+var o = { a: 1, b: 2 };
+{if $debug}console.log("debug");{/if}
+</script>
+<p>after</p>

@@ -34,13 +34,11 @@
 #                        ^^ text.html.fenom meta.embedded.block.fenom source.fenom comment.block.fenom punctuation.definition.comment.end.fenom
 #                          ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
 >{ not a tag, brace followed by space }
-#^^ text.html.fenom
-#  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ text.html.fenom
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ text.html.fenom
 >{}
-#^^ text.html.fenom
+#^^^ text.html.fenom
 >{	tab after brace}
-#^^ text.html.fenom
-#  ^^^^^^^^^^^^^^^^^ text.html.fenom
+#^^^^^^^^^^^^^^^^^^^ text.html.fenom
 >{ignore}
 #^ text.html.fenom punctuation.section.embedded.begin.fenom
 # ^^^^^^ text.html.fenom keyword.control.fenom
