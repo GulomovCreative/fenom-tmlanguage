@@ -78,7 +78,12 @@ Atom's grammar loader accepted this format, but GitHub archived Atom in December
 
 ## Development
 
-The grammar is covered by two test suites.
+The grammar is covered by three test suites.
+
+**Grammar file checks.** `tests/grammar-file.test.mjs` checks the file parses
+and carries no duplicate keys — `JSON.parse` keeps the last of a repeated key
+and drops the earlier ones silently, which once left a rule with a comment that
+never applied.
 
 **Snapshot tests.** Each `tests/*.tpl` fixture has a matching `.snap` file
 recording the scope assigned to every token, so any change in highlighting shows
@@ -94,7 +99,7 @@ included, parsed as CSS. The snapshot suite cannot see that class of bug,
 because it stubs the HTML grammar out.
 
 ``` sh
-npm test             # both suites
+npm test             # all three suites
 npm run test:update  # rewrite the snapshots after an intentional change
 ```
 
