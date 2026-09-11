@@ -404,38 +404,38 @@
 #          ^^^^^^ text.html.fenom keyword.control.fenom
 #                ^ text.html.fenom punctuation.section.embedded.end.fenom
 >{if:ignore $cdn}{/if}
-#^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.control.fenom
-#   ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.separator.option.fenom
-#    ^^^^^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.other.option.fenom
-#          ^ text.html.fenom meta.embedded.block.fenom source.fenom
-#           ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#            ^^^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
-#               ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
-#                ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.begin.fenom
-#                 ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.definition.tag.fenom
-#                  ^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.control.fenom
-#                    ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
+#^ text.html.fenom punctuation.section.embedded.begin.fenom
+# ^^ text.html.fenom keyword.control.fenom
+#   ^ text.html.fenom punctuation.separator.option.fenom
+#    ^^^^^^ text.html.fenom keyword.other.option.fenom
+#          ^ text.html.fenom
+#           ^ text.html.fenom variable.other.fenom punctuation.definition.variable.fenom
+#            ^^^ text.html.fenom variable.other.fenom
+#               ^ text.html.fenom punctuation.section.embedded.end.fenom
+#                ^ text.html.fenom punctuation.section.embedded.begin.fenom
+#                 ^ text.html.fenom punctuation.definition.tag.fenom
+#                  ^^ text.html.fenom keyword.control.fenom
+#                    ^ text.html.fenom punctuation.section.embedded.end.fenom
 >{foreach:ignore:strip $list as $v}{/foreach}
-#^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^^^^^^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.control.fenom
-#        ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.separator.option.fenom
-#         ^^^^^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.other.option.fenom
-#               ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.separator.option.fenom
-#                ^^^^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.other.option.fenom
-#                     ^ text.html.fenom meta.embedded.block.fenom source.fenom
-#                      ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#                       ^^^^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
-#                           ^ text.html.fenom meta.embedded.block.fenom source.fenom
-#                            ^^ text.html.fenom meta.embedded.block.fenom source.fenom support.function.built-in.fenom
-#                              ^ text.html.fenom meta.embedded.block.fenom source.fenom
-#                               ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#                                ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
-#                                 ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
-#                                  ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.begin.fenom
-#                                   ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.definition.tag.fenom
-#                                    ^^^^^^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.control.fenom
-#                                           ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
+#^ text.html.fenom punctuation.section.embedded.begin.fenom
+# ^^^^^^^ text.html.fenom keyword.control.fenom
+#        ^ text.html.fenom punctuation.separator.option.fenom
+#         ^^^^^^ text.html.fenom keyword.other.option.fenom
+#               ^ text.html.fenom punctuation.separator.option.fenom
+#                ^^^^^ text.html.fenom keyword.other.option.fenom
+#                     ^ text.html.fenom
+#                      ^ text.html.fenom variable.other.fenom punctuation.definition.variable.fenom
+#                       ^^^^ text.html.fenom variable.other.fenom
+#                           ^ text.html.fenom
+#                            ^^ text.html.fenom support.function.built-in.fenom
+#                              ^ text.html.fenom
+#                               ^ text.html.fenom variable.other.fenom punctuation.definition.variable.fenom
+#                                ^ text.html.fenom variable.other.fenom
+#                                 ^ text.html.fenom punctuation.section.embedded.end.fenom
+#                                  ^ text.html.fenom punctuation.section.embedded.begin.fenom
+#                                   ^ text.html.fenom punctuation.definition.tag.fenom
+#                                    ^^^^^^^ text.html.fenom keyword.control.fenom
+#                                           ^ text.html.fenom punctuation.section.embedded.end.fenom
 >{block:escape 'name'}{/block}
 #^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.begin.fenom
 # ^^^^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.control.fenom
@@ -513,4 +513,43 @@
 #                 ^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.operator.fenom
 #                  ^^ text.html.fenom meta.embedded.block.fenom source.fenom constant.numeric.decimal.fenom
 #                    ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
+>{if:ignore $cdn.yandex}
+#^ text.html.fenom punctuation.section.embedded.begin.fenom
+# ^^ text.html.fenom keyword.control.fenom
+#   ^ text.html.fenom punctuation.separator.option.fenom
+#    ^^^^^^ text.html.fenom keyword.other.option.fenom
+#          ^ text.html.fenom
+#           ^ text.html.fenom variable.other.fenom punctuation.definition.variable.fenom
+#            ^^^ text.html.fenom variable.other.fenom
+#               ^ text.html.fenom punctuation.accessor.fenom
+#                ^^^^^^ text.html.fenom variable.other.property.fenom
+#                      ^ text.html.fenom punctuation.section.embedded.end.fenom
+>    var item = {cdn: "//yandex.st/"};
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ text.html.fenom meta.embedded.literal.fenom
+>{/if}
+#^ text.html.fenom punctuation.section.embedded.begin.fenom
+# ^ text.html.fenom punctuation.definition.tag.fenom
+#  ^^ text.html.fenom keyword.control.fenom
+#    ^ text.html.fenom punctuation.section.embedded.end.fenom
+>{foreach:ignore $list as $v}
+#^ text.html.fenom punctuation.section.embedded.begin.fenom
+# ^^^^^^^ text.html.fenom keyword.control.fenom
+#        ^ text.html.fenom punctuation.separator.option.fenom
+#         ^^^^^^ text.html.fenom keyword.other.option.fenom
+#               ^ text.html.fenom
+#                ^ text.html.fenom variable.other.fenom punctuation.definition.variable.fenom
+#                 ^^^^ text.html.fenom variable.other.fenom
+#                     ^ text.html.fenom
+#                      ^^ text.html.fenom support.function.built-in.fenom
+#                        ^ text.html.fenom
+#                         ^ text.html.fenom variable.other.fenom punctuation.definition.variable.fenom
+#                          ^ text.html.fenom variable.other.fenom
+#                           ^ text.html.fenom punctuation.section.embedded.end.fenom
+>    {not a tag here}
+#^^^^^^^^^^^^^^^^^^^^^ text.html.fenom meta.embedded.literal.fenom
+>{/foreach}
+#^ text.html.fenom punctuation.section.embedded.begin.fenom
+# ^ text.html.fenom punctuation.definition.tag.fenom
+#  ^^^^^^^ text.html.fenom keyword.control.fenom
+#         ^ text.html.fenom punctuation.section.embedded.end.fenom
 >

@@ -35,3 +35,9 @@
 {if:i $cdn}{/if}
 {$a ? $b : $c}
 {$looong|truncate:80}
+{if:ignore $cdn.yandex}
+    var item = {cdn: "//yandex.st/"};
+{/if}
+{foreach:ignore $list as $v}
+    {not a tag here}
+{/foreach}

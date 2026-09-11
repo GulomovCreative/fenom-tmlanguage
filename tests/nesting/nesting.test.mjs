@@ -129,6 +129,38 @@ check('a Fenom tag inside JavaScript', {
   expect: ['source.js', 'source.fenom', 'keyword.control.fenom'],
 });
 
+// An ignored region takes over its whole span, so the host grammar has to be
+// included back into it explicitly. Without that the contents lose all
+// highlighting rather than just the Fenom part of it.
+const ignoredCss = lineOf('.ignored {');
+check('CSS inside {ignore} is still highlighted', {
+  line: ignoredCss,
+  text: 'color',
+  expect: [
+    'meta.embedded.literal.fenom',
+    'source.css',
+    'support.type.property-name.css',
+  ],
+});
+
+// The body of a tag carrying :ignore is emitted verbatim, so no Fenom scope
+// may appear in it.
+// text.html.fenom is the grammar's own root scope and sits on every token;
+// meta.embedded.literal.fenom is the marker for the ignored region itself.
+// Neither is Fenom syntax highlighting, so neither counts here.
+const notSyntax = new Set(['text.html.fenom', 'meta.embedded.literal.fenom']);
+const ignoredBody = lineOf('var item =');
+const fenomInIgnoredBody = parsed[ignoredBody].filter((token) =>
+  token.scopes.some((scope) => scope.endsWith('.fenom') && !notSyntax.has(scope))
+);
+if (fenomInIgnoredBody.length) {
+  failures.push(
+    `the body of a tag with :ignore carries no Fenom scope\n    ${fenomInIgnoredBody
+      .map((t) => `${JSON.stringify(t.text)} -> ${t.scopes.join(' ')}`)
+      .join('\n    ')}`
+  );
+}
+
 if (failures.length) {
   console.error(`\n${failures.length} nesting check(s) failed:\n`);
   for (const failure of failures) console.error('  ' + failure + '\n');
