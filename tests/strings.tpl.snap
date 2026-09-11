@@ -165,7 +165,9 @@
 # ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
 #  ^^^^^^ text.html.fenom source.fenom variable.other.fenom variable.other.fenom
 #        ^^^^^^^^^ text.html.fenom source.fenom entity.name.function.fenom
-#                 ^^^^ text.html.fenom source.fenom
+#                 ^ text.html.fenom source.fenom
+#                  ^^ text.html.fenom source.fenom constant.numeric.decimal.fenom
+#                    ^ text.html.fenom source.fenom
 #                     ^ text.html.fenom source.fenom string.quoted.double.fenom punctuation.definition.string.begin.fenom
 #                      ^^^ text.html.fenom source.fenom string.quoted.double.fenom
 #                         ^ text.html.fenom source.fenom string.quoted.double.fenom punctuation.definition.string.end.fenom

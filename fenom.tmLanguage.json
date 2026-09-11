@@ -67,12 +67,39 @@
               "include": "#strings"
             },
             {
+              "include": "#numbers"
+            },
+            {
               "include": "#variables"
             },
             {
               "include": "#lang"
             }
           ]
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "match": "\\b0[xX][0-9a-fA-F]+\\b",
+          "name": "constant.numeric.hex.fenom"
+        },
+        {
+          "match": "\\b0[bB][01]+\\b",
+          "name": "constant.numeric.binary.fenom"
+        },
+        {
+          "match": "\\b\\d+\\.\\d+([eE][+-]?\\d+)?\\b|\\b\\d+[eE][+-]?\\d+\\b",
+          "name": "constant.numeric.float.fenom"
+        },
+        {
+          "match": "\\b0[0-7]+\\b",
+          "name": "constant.numeric.octal.fenom"
+        },
+        {
+          "match": "\\b\\d+\\b",
+          "name": "constant.numeric.decimal.fenom"
         }
       ]
     },
@@ -87,7 +114,7 @@
           "name": "constant.language.fenom"
         },
         {
-          "match": "\\b(var|set|add|if|else|elseif|foreach|foreachelse|autoescape|autotrim|for|extends|block|use|paste|parent|filter|break|continue|forelse|ignore|include|insert|macro|import|raw|switch|case|unset)\\b",
+          "match": "\\b(var|set|add|if|else|elseif|foreach|foreachelse|autoescape|autotrim|for|extends|block|use|paste|parent|filter|break|continue|forelse|ignore|include|insert|macro|import|raw|switch|case|unset|while|do|escape|strip)\\b",
           "name": "keyword.control.fenom"
         },
         {
