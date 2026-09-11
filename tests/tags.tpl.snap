@@ -392,13 +392,13 @@
 #                   ^^^^^^^^^^ text.html.fenom source.fenom keyword.control.fenom
 #                             ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
 >{ignore}{/ignore}
-#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^^^^^^ text.html.fenom source.fenom keyword.control.fenom
-#       ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
-#        ^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-#         ^ text.html.fenom source.fenom punctuation.definition.tag.fenom
-#          ^^^^^^ text.html.fenom source.fenom keyword.control.fenom
-#                ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+#^ text.html.fenom punctuation.section.embedded.begin.fenom
+# ^^^^^^ text.html.fenom keyword.control.fenom
+#       ^ text.html.fenom punctuation.section.embedded.end.fenom
+#        ^ text.html.fenom punctuation.section.embedded.begin.fenom
+#         ^ text.html.fenom punctuation.definition.tag.fenom
+#          ^^^^^^ text.html.fenom keyword.control.fenom
+#                ^ text.html.fenom punctuation.section.embedded.end.fenom
 >{if:ignore $cdn}{/if}
 #^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
 # ^^ text.html.fenom source.fenom keyword.control.fenom

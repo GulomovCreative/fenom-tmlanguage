@@ -9,6 +9,8 @@
 {	tab after brace}
 {ignore}
 h1 {font-size: 24px; color: #F00;}
+{if $a}{$var|upper}{/if}
+{* Fenom strips comments before it consults the ignore flag, so this is still a comment *}
 {/ignore}
 <style>
 h1 {color: #F00;}
