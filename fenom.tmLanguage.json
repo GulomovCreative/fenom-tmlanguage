@@ -180,6 +180,15 @@
           "name": "keyword.operator.logical.fenom"
         },
         {
+          "comment": "Square brackets serve both index access ($foo[5], $foo['bar']) and array literals ([1, 2, 3]).",
+          "match": "\\[",
+          "name": "punctuation.section.brackets.begin.fenom"
+        },
+        {
+          "match": "\\]",
+          "name": "punctuation.section.brackets.end.fenom"
+        },
+        {
           "match": "\\b(TRUE|FALSE|true|false)\\b",
           "name": "constant.language.fenom"
         },
@@ -258,12 +267,32 @@
           "name": "support.variable.fenom"
         },
         {
+          "comment": "The unnamed system variable, $.get, $.const, $.tpl and so on. The accessor name is matched by shape rather than against Fenom's built-in list, because addAccessor() lets a project register its own and a fixed list would leave those unhighlighted.",
           "captures": {
             "1": {
-              "name": "variable.language.fenom"
+              "name": "punctuation.definition.variable.fenom"
+            },
+            "2": {
+              "name": "punctuation.accessor.fenom"
+            },
+            "3": {
+              "name": "support.variable.fenom"
             }
           },
-          "match": "(\\$)\\.\\b",
+          "match": "(\\$)(\\.)([a-zA-Z_][a-zA-Z0-9_]*)\\b",
+          "name": "variable.other.global.fenom"
+        },
+        {
+          "comment": "A bare $. with no accessor after it.",
+          "captures": {
+            "1": {
+              "name": "punctuation.definition.variable.fenom"
+            },
+            "2": {
+              "name": "punctuation.accessor.fenom"
+            }
+          },
+          "match": "(\\$)(\\.)",
           "name": "variable.other.global.fenom"
         },
         {
@@ -274,6 +303,35 @@
           },
           "match": "(\\$)([a-zA-Z_][a-zA-Z0-9_]*)\\b",
           "name": "variable.other.fenom"
+        },
+        {
+          "comment": "Iteration properties inside {foreach}. Compiler::foreachProp accepts index, first and last and raises a CompileException for anything else, so only those three are matched; an unknown one falls through to the plain @ operator.",
+          "captures": {
+            "1": {
+              "name": "punctuation.accessor.fenom"
+            },
+            "2": {
+              "name": "support.variable.property.fenom"
+            }
+          },
+          "match": "(@)(index|first|last)\\b"
+        },
+        {
+          "comment": "Dot access, as in $user.name and $.get.debug.",
+          "captures": {
+            "1": {
+              "name": "punctuation.accessor.fenom"
+            },
+            "2": {
+              "name": "variable.other.property.fenom"
+            }
+          },
+          "match": "(\\.)([a-zA-Z_][a-zA-Z0-9_]*)\\b"
+        },
+        {
+          "comment": "Dot access with a numeric key, as in $foo.5. The digits are left to the numbers rule.",
+          "match": "\\.(?=\\d)",
+          "name": "punctuation.accessor.fenom"
         },
         {
           "captures": {
