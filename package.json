@@ -17,6 +17,8 @@
     "fenom.tmLanguage.json"
   ],
   "scripts": {
+    "test": "vscode-tmgrammar-snap -g fenom.tmLanguage.json -g tests/html-derivative.stub.tmLanguage.json -s text.html.fenom \"tests/**/*.tpl\"",
+    "test:update": "npm test -- --updateSnapshot",
     "publish:major": "npm version major",
     "publish:minor": "npm version minor",
     "publish:patch": "npm version patch",
@@ -31,5 +33,8 @@
     "TextMate",
     "syntax"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "vscode-tmgrammar-test": "^0.1.3"
+  }
 }
