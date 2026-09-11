@@ -207,7 +207,7 @@
 >{$-foo}
 #^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
 # ^ text.html.fenom source.fenom
-#  ^ text.html.fenom source.fenom keyword.operator.fenom
+#  ^ text.html.fenom source.fenom keyword.operator.arithmetic.fenom
 #   ^^^ text.html.fenom source.fenom
 #      ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
 >{$5foo}

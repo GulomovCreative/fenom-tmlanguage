@@ -123,14 +123,35 @@
           "name": "punctuation.definition.tag.fenom"
         },
         {
-          "comment": "Alternatives are ordered longest first, so that === is one token rather than three, and <<= is not split into << and =.",
-          "match": "<<=|>>=|===|!==|==|!=|<>|<=|>=|&&|\\|\\||<<|>>|\\+\\+|--|~~|~=|\\|=|&=|\\^=|\\+=|-=|\\*=|/=|%=|\\?:|!:|=|<|>|!|\\||&|\\^|~|\\+|-|\\*|/|%|\\?|:|@",
-          "name": "keyword.operator.fenom"
+          "comment": "Alternatives are ordered longest first -- all three-character operators, then all two-character, then all one-character -- so that === is one token rather than three, and <<= is not split into << and =. Operators of equal length cannot be prefixes of one another, so their relative order is free, which is what lets each length band be split into several capture groups by category. Several groups therefore share a scope. Group 10 is the concatenating tilde: a bare ~ concatenates when it sits between operands ($a ~ $b) and is bitwise not when it prefixes one (~$a), and trailing whitespace is the only thing that tells them apart, so it must be tried before group 14.",
+          "captures": {
+            "1": { "name": "keyword.operator.assignment.fenom" },
+            "2": { "name": "keyword.operator.comparison.fenom" },
+            "3": { "name": "keyword.operator.comparison.fenom" },
+            "4": { "name": "keyword.operator.logical.fenom" },
+            "5": { "name": "keyword.operator.bitwise.fenom" },
+            "6": { "name": "keyword.operator.arithmetic.fenom" },
+            "7": { "name": "keyword.operator.string.fenom" },
+            "8": { "name": "keyword.operator.assignment.fenom" },
+            "9": { "name": "keyword.operator.ternary.fenom" },
+            "10": { "name": "keyword.operator.string.fenom" },
+            "11": { "name": "keyword.operator.assignment.fenom" },
+            "12": { "name": "keyword.operator.comparison.fenom" },
+            "13": { "name": "keyword.operator.logical.fenom" },
+            "14": { "name": "keyword.operator.bitwise.fenom" },
+            "15": { "name": "keyword.operator.arithmetic.fenom" },
+            "16": { "name": "keyword.operator.fenom" }
+          },
+          "match": "(<<=|>>=)|(===|!==)|(==|!=|<>|<=|>=)|(&&|\\|\\|)|(<<|>>)|(\\+\\+|--)|(~~)|(~=|\\|=|&=|\\^=|\\+=|-=|\\*=|/=|%=)|(\\?:|!:)|(~(?=\\s))|(=)|(<|>)|(!)|(\\||&|\\^|~)|(\\+|-|\\*|/|%)|(\\?|:|@)"
         },
         {
-          "comment": "Word operators. The compound forms are listed before their prefixes so that 'is not' does not match as a bare 'is'.",
-          "match": "\\b(is\\s+not|not\\s+in|in\\s+list|in\\s+keys|in\\s+string|is|in|and|or|xor)\\b",
-          "name": "keyword.operator.fenom"
+          "comment": "Test and containment operators. The compound forms are listed before their prefixes so that 'is not' does not match as a bare 'is'.",
+          "match": "\\b(is\\s+not|not\\s+in|in\\s+list|in\\s+keys|in\\s+string|is|in)\\b",
+          "name": "keyword.operator.comparison.fenom"
+        },
+        {
+          "match": "\\b(and|or|xor)\\b",
+          "name": "keyword.operator.logical.fenom"
         },
         {
           "match": "\\b(TRUE|FALSE|true|false)\\b",
