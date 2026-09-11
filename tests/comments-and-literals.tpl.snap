@@ -14,6 +14,25 @@
 #^^ text.html.fenom comment.block.fenom punctuation.definition.comment.begin.fenom
 #  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ text.html.fenom comment.block.fenom
 #                                            ^^ text.html.fenom comment.block.fenom punctuation.definition.comment.end.fenom
+>{* Fenom hardcodes { and } as its delimiters; neither {% %} nor {{* *}} exists *}
+#^^ text.html.fenom comment.block.fenom punctuation.definition.comment.begin.fenom
+#  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ text.html.fenom comment.block.fenom
+#                                                                 ^^ text.html.fenom comment.block.fenom invalid.illegal.characters-not-allowed-here.fenom
+#                                                                   ^ text.html.fenom comment.block.fenom
+#                                                                    ^^ text.html.fenom comment.block.fenom punctuation.definition.comment.end.fenom
+#                                                                      ^^^^^^^^^^^^ text.html.fenom
+>{% not a Fenom delimiter %}
+#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
+# ^ text.html.fenom source.fenom keyword.operator.arithmetic.fenom
+#  ^^^^^^^^^^^^^^^^^^^^^^^ text.html.fenom source.fenom
+#                         ^ text.html.fenom source.fenom keyword.operator.arithmetic.fenom
+#                          ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+>{{* not a Fenom comment *}}
+#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
+# ^^ text.html.fenom source.fenom comment.block.fenom punctuation.definition.comment.begin.fenom
+#   ^^^^^^^^^^^^^^^^^^^^^ text.html.fenom source.fenom comment.block.fenom
+#                        ^^ text.html.fenom source.fenom comment.block.fenom punctuation.definition.comment.end.fenom
+#                          ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
 >{ not a tag, brace followed by space }
 #^^ text.html.fenom
 #  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ text.html.fenom

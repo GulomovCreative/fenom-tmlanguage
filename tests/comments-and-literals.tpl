@@ -4,6 +4,9 @@
   comment
 *}
 {* a comment with {$var} and {if $a} inside *}
+{* Fenom hardcodes { and } as its delimiters; neither {% %} nor {{* *}} exists *}
+{% not a Fenom delimiter %}
+{{* not a Fenom comment *}}
 { not a tag, brace followed by space }
 {}
 {	tab after brace}
