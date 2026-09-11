@@ -32,11 +32,15 @@
 #   ^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
 #    ^^^^ text.html.fenom source.fenom
 #        ^ text.html.fenom source.fenom keyword.operator.fenom
-#         ^^^^^^^^^^^^^^^^^^^^^^^^ text.html.fenom source.fenom
+#         ^^^^ text.html.fenom source.fenom
+#             ^ text.html.fenom source.fenom keyword.operator.fenom
+#              ^^^^^^^^^^^^ text.html.fenom source.fenom
+#                          ^ text.html.fenom source.fenom keyword.operator.fenom
+#                           ^^^^^^ text.html.fenom source.fenom
 #                                 ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
 >{/ignore}
 #^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^ text.html.fenom source.fenom
+# ^ text.html.fenom source.fenom punctuation.definition.tag.fenom
 #  ^^^^^^ text.html.fenom source.fenom keyword.control.fenom
 #        ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
 ><style>
@@ -44,7 +48,9 @@
 >h1 {color: #F00;}
 #^^^ text.html.fenom
 #   ^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-#    ^^^^^^^^^^^^ text.html.fenom source.fenom
+#    ^^^^^ text.html.fenom source.fenom
+#         ^ text.html.fenom source.fenom keyword.operator.fenom
+#          ^^^^^^ text.html.fenom source.fenom
 #                ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
 ></style>
 #^^^^^^^^^ text.html.fenom
@@ -53,7 +59,9 @@
 >var item = {cdn: "//example.com/"};
 #^^^^^^^^^^^ text.html.fenom
 #           ^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-#            ^^^^^ text.html.fenom source.fenom
+#            ^^^ text.html.fenom source.fenom
+#               ^ text.html.fenom source.fenom keyword.operator.fenom
+#                ^ text.html.fenom source.fenom
 #                 ^ text.html.fenom source.fenom string.quoted.double.fenom punctuation.definition.string.begin.fenom
 #                  ^^^^^^^^^^^^^^ text.html.fenom source.fenom string.quoted.double.fenom
 #                                ^ text.html.fenom source.fenom string.quoted.double.fenom punctuation.definition.string.end.fenom

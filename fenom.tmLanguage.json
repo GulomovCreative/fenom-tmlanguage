@@ -106,7 +106,30 @@
     "lang": {
       "patterns": [
         {
-          "match": "(\\|=|\\+=|-=|\\*=|\\%=|!==|=|&=|\\^=|~|/=|\\-|\\+|/ |\\*|@|!=|!|<=|>=|<|>|===|==|%|&&|\\|\\|)|\\b(and|or|xor)\\b",
+          "comment": "Modifiers are matched before the operators so the leading pipe is read as a modifier separator rather than as bitwise or.",
+          "captures": {
+            "1": {
+              "name": "keyword.operator.fenom"
+            },
+            "2": {
+              "name": "entity.name.function.fenom"
+            }
+          },
+          "match": "(\\|)\\s*([a-zA-Z_]+)\\b"
+        },
+        {
+          "comment": "The slash opening a closing tag, as in {/if}. Matched before the operators so it is not read as division.",
+          "match": "(?<=\\{)/",
+          "name": "punctuation.definition.tag.fenom"
+        },
+        {
+          "comment": "Alternatives are ordered longest first, so that === is one token rather than three, and <<= is not split into << and =.",
+          "match": "<<=|>>=|===|!==|==|!=|<>|<=|>=|&&|\\|\\||<<|>>|\\+\\+|--|~~|~=|\\|=|&=|\\^=|\\+=|-=|\\*=|/=|%=|\\?:|!:|=|<|>|!|\\||&|\\^|~|\\+|-|\\*|/|%|\\?|:|@",
+          "name": "keyword.operator.fenom"
+        },
+        {
+          "comment": "Word operators. The compound forms are listed before their prefixes so that 'is not' does not match as a bare 'is'.",
+          "match": "\\b(is\\s+not|not\\s+in|in\\s+list|in\\s+keys|in\\s+string|is|in|and|or|xor)\\b",
           "name": "keyword.operator.fenom"
         },
         {
@@ -132,17 +155,6 @@
         {
           "match": "\\b(plus|from|as|capture|default|cycle)\\b",
           "name": "support.function.built-in.fenom"
-        },
-        {
-          "captures": {
-            "1": {
-              "name": "keyword.operator.fenom"
-            },
-            "2": {
-              "name": "entity.name.function.fenom"
-            }
-          },
-          "match": "(\\|)\\s*([a-zA-Z_]+)\\b"
         }
       ]
     },

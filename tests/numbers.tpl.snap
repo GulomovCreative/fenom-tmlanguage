@@ -124,7 +124,8 @@
 #             ^ text.html.fenom source.fenom
 #              ^ text.html.fenom source.fenom constant.numeric.decimal.fenom
 #               ^ text.html.fenom source.fenom
-#                ^^ text.html.fenom source.fenom keyword.operator.fenom
+#                ^ text.html.fenom source.fenom keyword.operator.fenom
+#                 ^ text.html.fenom source.fenom
 #                  ^ text.html.fenom source.fenom constant.numeric.decimal.fenom
 #                   ^ text.html.fenom source.fenom
 #                    ^ text.html.fenom source.fenom keyword.operator.fenom
