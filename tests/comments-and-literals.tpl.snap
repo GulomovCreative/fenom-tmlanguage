@@ -18,31 +18,27 @@
 #^^ text.html.fenom
 #  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ text.html.fenom
 >{}
-#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+#^^ text.html.fenom
 >{	tab after brace}
 #^^ text.html.fenom
 #  ^^^^^^^^^^^^^^^^^ text.html.fenom
 >{ignore}
-#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^^^^^^ text.html.fenom source.fenom keyword.control.fenom
-#       ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+#^ text.html.fenom punctuation.section.embedded.begin.fenom
+# ^^^^^^ text.html.fenom keyword.control.fenom
+#       ^ text.html.fenom punctuation.section.embedded.end.fenom
 >h1 {font-size: 24px; color: #F00;}
-#^^^ text.html.fenom
-#   ^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-#    ^^^^ text.html.fenom source.fenom
-#        ^ text.html.fenom source.fenom keyword.operator.arithmetic.fenom
-#         ^^^^ text.html.fenom source.fenom
-#             ^ text.html.fenom source.fenom keyword.operator.fenom
-#              ^^^^^^^^^^^^ text.html.fenom source.fenom
-#                          ^ text.html.fenom source.fenom keyword.operator.fenom
-#                           ^^^^^^ text.html.fenom source.fenom
-#                                 ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ text.html.fenom meta.embedded.literal.fenom
+>{if $a}{$var|upper}{/if}
+#^^^^^^^^^^^^^^^^^^^^^^^^^ text.html.fenom meta.embedded.literal.fenom
+>{* Fenom strips comments before it consults the ignore flag, so this is still a comment *}
+#^^ text.html.fenom meta.embedded.literal.fenom comment.block.fenom punctuation.definition.comment.begin.fenom
+#  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ text.html.fenom meta.embedded.literal.fenom comment.block.fenom
+#                                                                                        ^^ text.html.fenom meta.embedded.literal.fenom comment.block.fenom punctuation.definition.comment.end.fenom
 >{/ignore}
-#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^ text.html.fenom source.fenom punctuation.definition.tag.fenom
-#  ^^^^^^ text.html.fenom source.fenom keyword.control.fenom
-#        ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+#^ text.html.fenom punctuation.section.embedded.begin.fenom
+# ^ text.html.fenom punctuation.definition.tag.fenom
+#  ^^^^^^ text.html.fenom keyword.control.fenom
+#        ^ text.html.fenom punctuation.section.embedded.end.fenom
 ><style>
 #^^^^^^^^ text.html.fenom
 >h1 {color: #F00;}

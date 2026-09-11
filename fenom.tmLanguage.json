@@ -10,6 +10,9 @@
           "include": "#nonFenom"
         },
         {
+          "include": "#ignore"
+        },
+        {
           "include": "#comments"
         },
         {
@@ -25,7 +28,30 @@
     "nonFenom": {
       "patterns": [
         {
-          "match": "(\\{%?)\\s"
+          "comment": "A brace is literal text when the next character is whitespace or a closing brace: Fenom's lexer checks for exactly \\n, \\r, \\t, space and } before treating a brace as the start of a tag.",
+          "match": "(\\{%?)[\\s}]"
+        }
+      ]
+    },
+    "ignore": {
+      "comment": "Everything between {ignore} and {/ignore} is emitted verbatim, so Fenom syntax inside it must not be highlighted. The content is scoped meta.embedded.literal, which this grammar's injection selector already excludes, so the injection stops applying inside the block while the host HTML grammar keeps working. Comments are the one exception: Fenom's lexer handles {* *} before it consults the ignore flag, so they are still stripped inside an ignore block and are still highlighted here.",
+      "begin": "(\\{)(ignore)(\\})",
+      "beginCaptures": {
+        "1": { "name": "punctuation.section.embedded.begin.fenom" },
+        "2": { "name": "keyword.control.fenom" },
+        "3": { "name": "punctuation.section.embedded.end.fenom" }
+      },
+      "end": "(\\{)(/)(ignore)(\\})",
+      "endCaptures": {
+        "1": { "name": "punctuation.section.embedded.begin.fenom" },
+        "2": { "name": "punctuation.definition.tag.fenom" },
+        "3": { "name": "keyword.control.fenom" },
+        "4": { "name": "punctuation.section.embedded.end.fenom" }
+      },
+      "contentName": "meta.embedded.literal.fenom",
+      "patterns": [
+        {
+          "include": "#comments"
         }
       ]
     },
