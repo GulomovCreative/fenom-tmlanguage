@@ -24,3 +24,7 @@
 {$value@key}
 {$_modx->resource}
 {$_modx->runSnippet('name')}
+{* malformed: none of these are valid variable names in Fenom *}
+{$ foo}
+{$-foo}
+{$5foo}
