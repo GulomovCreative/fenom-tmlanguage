@@ -1,619 +1,619 @@
 >{$a + $b}
-#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#  ^ text.html.fenom source.fenom variable.other.fenom
-#   ^ text.html.fenom source.fenom
-#    ^ text.html.fenom source.fenom keyword.operator.arithmetic.fenom
-#     ^ text.html.fenom source.fenom
-#      ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#       ^ text.html.fenom source.fenom variable.other.fenom
-#        ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+#^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.begin.fenom
+# ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#  ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#   ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#    ^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.operator.arithmetic.fenom
+#     ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#      ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#       ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#        ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
 >{$a - $b}
-#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#  ^ text.html.fenom source.fenom variable.other.fenom
-#   ^ text.html.fenom source.fenom
-#    ^ text.html.fenom source.fenom keyword.operator.arithmetic.fenom
-#     ^ text.html.fenom source.fenom
-#      ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#       ^ text.html.fenom source.fenom variable.other.fenom
-#        ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+#^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.begin.fenom
+# ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#  ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#   ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#    ^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.operator.arithmetic.fenom
+#     ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#      ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#       ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#        ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
 >{$a * $b}
-#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#  ^ text.html.fenom source.fenom variable.other.fenom
-#   ^ text.html.fenom source.fenom
-#    ^ text.html.fenom source.fenom keyword.operator.arithmetic.fenom
-#     ^ text.html.fenom source.fenom
-#      ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#       ^ text.html.fenom source.fenom variable.other.fenom
-#        ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+#^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.begin.fenom
+# ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#  ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#   ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#    ^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.operator.arithmetic.fenom
+#     ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#      ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#       ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#        ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
 >{$a / $b}
-#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#  ^ text.html.fenom source.fenom variable.other.fenom
-#   ^ text.html.fenom source.fenom
-#    ^ text.html.fenom source.fenom keyword.operator.arithmetic.fenom
-#     ^ text.html.fenom source.fenom
-#      ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#       ^ text.html.fenom source.fenom variable.other.fenom
-#        ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+#^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.begin.fenom
+# ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#  ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#   ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#    ^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.operator.arithmetic.fenom
+#     ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#      ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#       ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#        ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
 >{$a % $b}
-#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#  ^ text.html.fenom source.fenom variable.other.fenom
-#   ^ text.html.fenom source.fenom
-#    ^ text.html.fenom source.fenom keyword.operator.arithmetic.fenom
-#     ^ text.html.fenom source.fenom
-#      ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#       ^ text.html.fenom source.fenom variable.other.fenom
-#        ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+#^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.begin.fenom
+# ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#  ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#   ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#    ^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.operator.arithmetic.fenom
+#     ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#      ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#       ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#        ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
 >{$a || $b}
-#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#  ^ text.html.fenom source.fenom variable.other.fenom
-#   ^ text.html.fenom source.fenom
-#    ^^ text.html.fenom source.fenom keyword.operator.logical.fenom
-#      ^ text.html.fenom source.fenom
-#       ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#        ^ text.html.fenom source.fenom variable.other.fenom
-#         ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+#^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.begin.fenom
+# ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#  ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#   ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#    ^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.operator.logical.fenom
+#      ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#       ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#        ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#         ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
 >{$a && $b}
-#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#  ^ text.html.fenom source.fenom variable.other.fenom
-#   ^ text.html.fenom source.fenom
-#    ^^ text.html.fenom source.fenom keyword.operator.logical.fenom
-#      ^ text.html.fenom source.fenom
-#       ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#        ^ text.html.fenom source.fenom variable.other.fenom
-#         ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+#^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.begin.fenom
+# ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#  ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#   ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#    ^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.operator.logical.fenom
+#      ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#       ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#        ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#         ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
 >{!$a}
-#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^ text.html.fenom source.fenom keyword.operator.logical.fenom
-#  ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#   ^ text.html.fenom source.fenom variable.other.fenom
-#    ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+#^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.begin.fenom
+# ^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.operator.logical.fenom
+#  ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#   ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#    ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
 >{$a and $b}
-#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#  ^ text.html.fenom source.fenom variable.other.fenom
-#   ^ text.html.fenom source.fenom
-#    ^^^ text.html.fenom source.fenom keyword.operator.logical.fenom
-#       ^ text.html.fenom source.fenom
-#        ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#         ^ text.html.fenom source.fenom variable.other.fenom
-#          ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+#^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.begin.fenom
+# ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#  ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#   ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#    ^^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.operator.logical.fenom
+#       ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#        ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#         ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#          ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
 >{$a or $b}
-#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#  ^ text.html.fenom source.fenom variable.other.fenom
-#   ^ text.html.fenom source.fenom
-#    ^^ text.html.fenom source.fenom keyword.operator.logical.fenom
-#      ^ text.html.fenom source.fenom
-#       ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#        ^ text.html.fenom source.fenom variable.other.fenom
-#         ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+#^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.begin.fenom
+# ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#  ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#   ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#    ^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.operator.logical.fenom
+#      ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#       ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#        ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#         ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
 >{$a xor $b}
-#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#  ^ text.html.fenom source.fenom variable.other.fenom
-#   ^ text.html.fenom source.fenom
-#    ^^^ text.html.fenom source.fenom keyword.operator.logical.fenom
-#       ^ text.html.fenom source.fenom
-#        ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#         ^ text.html.fenom source.fenom variable.other.fenom
-#          ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+#^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.begin.fenom
+# ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#  ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#   ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#    ^^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.operator.logical.fenom
+#       ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#        ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#         ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#          ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
 >{$a < $b}
-#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#  ^ text.html.fenom source.fenom variable.other.fenom
-#   ^ text.html.fenom source.fenom
-#    ^ text.html.fenom source.fenom keyword.operator.comparison.fenom
-#     ^ text.html.fenom source.fenom
-#      ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#       ^ text.html.fenom source.fenom variable.other.fenom
-#        ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+#^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.begin.fenom
+# ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#  ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#   ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#    ^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.operator.comparison.fenom
+#     ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#      ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#       ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#        ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
 >{$a > $b}
-#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#  ^ text.html.fenom source.fenom variable.other.fenom
-#   ^ text.html.fenom source.fenom
-#    ^ text.html.fenom source.fenom keyword.operator.comparison.fenom
-#     ^ text.html.fenom source.fenom
-#      ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#       ^ text.html.fenom source.fenom variable.other.fenom
-#        ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+#^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.begin.fenom
+# ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#  ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#   ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#    ^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.operator.comparison.fenom
+#     ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#      ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#       ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#        ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
 >{$a <= $b}
-#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#  ^ text.html.fenom source.fenom variable.other.fenom
-#   ^ text.html.fenom source.fenom
-#    ^^ text.html.fenom source.fenom keyword.operator.comparison.fenom
-#      ^ text.html.fenom source.fenom
-#       ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#        ^ text.html.fenom source.fenom variable.other.fenom
-#         ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+#^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.begin.fenom
+# ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#  ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#   ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#    ^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.operator.comparison.fenom
+#      ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#       ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#        ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#         ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
 >{$a >= $b}
-#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#  ^ text.html.fenom source.fenom variable.other.fenom
-#   ^ text.html.fenom source.fenom
-#    ^^ text.html.fenom source.fenom keyword.operator.comparison.fenom
-#      ^ text.html.fenom source.fenom
-#       ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#        ^ text.html.fenom source.fenom variable.other.fenom
-#         ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+#^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.begin.fenom
+# ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#  ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#   ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#    ^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.operator.comparison.fenom
+#      ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#       ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#        ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#         ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
 >{$a == $b}
-#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#  ^ text.html.fenom source.fenom variable.other.fenom
-#   ^ text.html.fenom source.fenom
-#    ^^ text.html.fenom source.fenom keyword.operator.comparison.fenom
-#      ^ text.html.fenom source.fenom
-#       ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#        ^ text.html.fenom source.fenom variable.other.fenom
-#         ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+#^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.begin.fenom
+# ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#  ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#   ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#    ^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.operator.comparison.fenom
+#      ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#       ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#        ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#         ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
 >{$a === $b}
-#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#  ^ text.html.fenom source.fenom variable.other.fenom
-#   ^ text.html.fenom source.fenom
-#    ^^^ text.html.fenom source.fenom keyword.operator.comparison.fenom
-#       ^ text.html.fenom source.fenom
-#        ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#         ^ text.html.fenom source.fenom variable.other.fenom
-#          ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+#^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.begin.fenom
+# ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#  ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#   ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#    ^^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.operator.comparison.fenom
+#       ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#        ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#         ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#          ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
 >{$a != $b}
-#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#  ^ text.html.fenom source.fenom variable.other.fenom
-#   ^ text.html.fenom source.fenom
-#    ^^ text.html.fenom source.fenom keyword.operator.comparison.fenom
-#      ^ text.html.fenom source.fenom
-#       ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#        ^ text.html.fenom source.fenom variable.other.fenom
-#         ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+#^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.begin.fenom
+# ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#  ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#   ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#    ^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.operator.comparison.fenom
+#      ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#       ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#        ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#         ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
 >{$a !== $b}
-#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#  ^ text.html.fenom source.fenom variable.other.fenom
-#   ^ text.html.fenom source.fenom
-#    ^^^ text.html.fenom source.fenom keyword.operator.comparison.fenom
-#       ^ text.html.fenom source.fenom
-#        ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#         ^ text.html.fenom source.fenom variable.other.fenom
-#          ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+#^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.begin.fenom
+# ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#  ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#   ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#    ^^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.operator.comparison.fenom
+#       ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#        ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#         ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#          ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
 >{$a <> $b}
-#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#  ^ text.html.fenom source.fenom variable.other.fenom
-#   ^ text.html.fenom source.fenom
-#    ^^ text.html.fenom source.fenom keyword.operator.comparison.fenom
-#      ^ text.html.fenom source.fenom
-#       ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#        ^ text.html.fenom source.fenom variable.other.fenom
-#         ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+#^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.begin.fenom
+# ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#  ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#   ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#    ^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.operator.comparison.fenom
+#      ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#       ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#        ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#         ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
 >{$a | $b}
-#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#  ^ text.html.fenom source.fenom variable.other.fenom
-#   ^ text.html.fenom source.fenom
-#    ^ text.html.fenom source.fenom keyword.operator.bitwise.fenom
-#     ^ text.html.fenom source.fenom
-#      ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#       ^ text.html.fenom source.fenom variable.other.fenom
-#        ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+#^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.begin.fenom
+# ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#  ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#   ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#    ^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.operator.bitwise.fenom
+#     ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#      ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#       ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#        ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
 >{$a & $b}
-#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#  ^ text.html.fenom source.fenom variable.other.fenom
-#   ^ text.html.fenom source.fenom
-#    ^ text.html.fenom source.fenom keyword.operator.bitwise.fenom
-#     ^ text.html.fenom source.fenom
-#      ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#       ^ text.html.fenom source.fenom variable.other.fenom
-#        ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+#^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.begin.fenom
+# ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#  ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#   ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#    ^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.operator.bitwise.fenom
+#     ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#      ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#       ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#        ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
 >{$a ^ $b}
-#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#  ^ text.html.fenom source.fenom variable.other.fenom
-#   ^ text.html.fenom source.fenom
-#    ^ text.html.fenom source.fenom keyword.operator.bitwise.fenom
-#     ^ text.html.fenom source.fenom
-#      ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#       ^ text.html.fenom source.fenom variable.other.fenom
-#        ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+#^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.begin.fenom
+# ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#  ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#   ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#    ^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.operator.bitwise.fenom
+#     ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#      ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#       ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#        ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
 >{~$a}
-#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^ text.html.fenom source.fenom keyword.operator.bitwise.fenom
-#  ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#   ^ text.html.fenom source.fenom variable.other.fenom
-#    ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+#^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.begin.fenom
+# ^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.operator.bitwise.fenom
+#  ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#   ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#    ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
 >{$a << $b}
-#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#  ^ text.html.fenom source.fenom variable.other.fenom
-#   ^ text.html.fenom source.fenom
-#    ^^ text.html.fenom source.fenom keyword.operator.bitwise.fenom
-#      ^ text.html.fenom source.fenom
-#       ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#        ^ text.html.fenom source.fenom variable.other.fenom
-#         ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+#^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.begin.fenom
+# ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#  ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#   ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#    ^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.operator.bitwise.fenom
+#      ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#       ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#        ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#         ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
 >{$a >> $b}
-#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#  ^ text.html.fenom source.fenom variable.other.fenom
-#   ^ text.html.fenom source.fenom
-#    ^^ text.html.fenom source.fenom keyword.operator.bitwise.fenom
-#      ^ text.html.fenom source.fenom
-#       ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#        ^ text.html.fenom source.fenom variable.other.fenom
-#         ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+#^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.begin.fenom
+# ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#  ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#   ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#    ^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.operator.bitwise.fenom
+#      ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#       ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#        ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#         ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
 >{var $a = $b}
-#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^^^ text.html.fenom source.fenom keyword.control.fenom
-#    ^ text.html.fenom source.fenom
-#     ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#      ^ text.html.fenom source.fenom variable.other.fenom
-#       ^ text.html.fenom source.fenom
-#        ^ text.html.fenom source.fenom keyword.operator.assignment.fenom
-#         ^ text.html.fenom source.fenom
-#          ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#           ^ text.html.fenom source.fenom variable.other.fenom
-#            ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+#^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.begin.fenom
+# ^^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.control.fenom
+#    ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#     ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#      ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#       ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#        ^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.operator.assignment.fenom
+#         ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#          ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#           ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#            ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
 >{var $a += $b}
-#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^^^ text.html.fenom source.fenom keyword.control.fenom
-#    ^ text.html.fenom source.fenom
-#     ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#      ^ text.html.fenom source.fenom variable.other.fenom
-#       ^ text.html.fenom source.fenom
-#        ^^ text.html.fenom source.fenom keyword.operator.assignment.fenom
-#          ^ text.html.fenom source.fenom
-#           ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#            ^ text.html.fenom source.fenom variable.other.fenom
-#             ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+#^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.begin.fenom
+# ^^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.control.fenom
+#    ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#     ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#      ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#       ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#        ^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.operator.assignment.fenom
+#          ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#           ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#            ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#             ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
 >{var $a -= $b}
-#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^^^ text.html.fenom source.fenom keyword.control.fenom
-#    ^ text.html.fenom source.fenom
-#     ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#      ^ text.html.fenom source.fenom variable.other.fenom
-#       ^ text.html.fenom source.fenom
-#        ^^ text.html.fenom source.fenom keyword.operator.assignment.fenom
-#          ^ text.html.fenom source.fenom
-#           ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#            ^ text.html.fenom source.fenom variable.other.fenom
-#             ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+#^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.begin.fenom
+# ^^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.control.fenom
+#    ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#     ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#      ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#       ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#        ^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.operator.assignment.fenom
+#          ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#           ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#            ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#             ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
 >{var $a *= $b}
-#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^^^ text.html.fenom source.fenom keyword.control.fenom
-#    ^ text.html.fenom source.fenom
-#     ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#      ^ text.html.fenom source.fenom variable.other.fenom
-#       ^ text.html.fenom source.fenom
-#        ^^ text.html.fenom source.fenom keyword.operator.assignment.fenom
-#          ^ text.html.fenom source.fenom
-#           ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#            ^ text.html.fenom source.fenom variable.other.fenom
-#             ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+#^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.begin.fenom
+# ^^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.control.fenom
+#    ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#     ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#      ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#       ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#        ^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.operator.assignment.fenom
+#          ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#           ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#            ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#             ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
 >{var $a /= $b}
-#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^^^ text.html.fenom source.fenom keyword.control.fenom
-#    ^ text.html.fenom source.fenom
-#     ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#      ^ text.html.fenom source.fenom variable.other.fenom
-#       ^ text.html.fenom source.fenom
-#        ^^ text.html.fenom source.fenom keyword.operator.assignment.fenom
-#          ^ text.html.fenom source.fenom
-#           ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#            ^ text.html.fenom source.fenom variable.other.fenom
-#             ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+#^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.begin.fenom
+# ^^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.control.fenom
+#    ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#     ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#      ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#       ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#        ^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.operator.assignment.fenom
+#          ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#           ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#            ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#             ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
 >{var $a %= $b}
-#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^^^ text.html.fenom source.fenom keyword.control.fenom
-#    ^ text.html.fenom source.fenom
-#     ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#      ^ text.html.fenom source.fenom variable.other.fenom
-#       ^ text.html.fenom source.fenom
-#        ^^ text.html.fenom source.fenom keyword.operator.assignment.fenom
-#          ^ text.html.fenom source.fenom
-#           ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#            ^ text.html.fenom source.fenom variable.other.fenom
-#             ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+#^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.begin.fenom
+# ^^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.control.fenom
+#    ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#     ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#      ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#       ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#        ^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.operator.assignment.fenom
+#          ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#           ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#            ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#             ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
 >{var $a &= $b}
-#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^^^ text.html.fenom source.fenom keyword.control.fenom
-#    ^ text.html.fenom source.fenom
-#     ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#      ^ text.html.fenom source.fenom variable.other.fenom
-#       ^ text.html.fenom source.fenom
-#        ^^ text.html.fenom source.fenom keyword.operator.assignment.fenom
-#          ^ text.html.fenom source.fenom
-#           ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#            ^ text.html.fenom source.fenom variable.other.fenom
-#             ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+#^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.begin.fenom
+# ^^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.control.fenom
+#    ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#     ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#      ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#       ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#        ^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.operator.assignment.fenom
+#          ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#           ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#            ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#             ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
 >{var $a |= $b}
-#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^^^ text.html.fenom source.fenom keyword.control.fenom
-#    ^ text.html.fenom source.fenom
-#     ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#      ^ text.html.fenom source.fenom variable.other.fenom
-#       ^ text.html.fenom source.fenom
-#        ^^ text.html.fenom source.fenom keyword.operator.assignment.fenom
-#          ^ text.html.fenom source.fenom
-#           ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#            ^ text.html.fenom source.fenom variable.other.fenom
-#             ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+#^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.begin.fenom
+# ^^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.control.fenom
+#    ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#     ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#      ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#       ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#        ^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.operator.assignment.fenom
+#          ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#           ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#            ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#             ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
 >{var $a ^= $b}
-#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^^^ text.html.fenom source.fenom keyword.control.fenom
-#    ^ text.html.fenom source.fenom
-#     ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#      ^ text.html.fenom source.fenom variable.other.fenom
-#       ^ text.html.fenom source.fenom
-#        ^^ text.html.fenom source.fenom keyword.operator.assignment.fenom
-#          ^ text.html.fenom source.fenom
-#           ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#            ^ text.html.fenom source.fenom variable.other.fenom
-#             ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+#^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.begin.fenom
+# ^^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.control.fenom
+#    ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#     ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#      ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#       ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#        ^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.operator.assignment.fenom
+#          ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#           ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#            ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#             ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
 >{var $a <<= $b}
-#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^^^ text.html.fenom source.fenom keyword.control.fenom
-#    ^ text.html.fenom source.fenom
-#     ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#      ^ text.html.fenom source.fenom variable.other.fenom
-#       ^ text.html.fenom source.fenom
-#        ^^^ text.html.fenom source.fenom keyword.operator.assignment.fenom
-#           ^ text.html.fenom source.fenom
-#            ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#             ^ text.html.fenom source.fenom variable.other.fenom
-#              ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+#^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.begin.fenom
+# ^^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.control.fenom
+#    ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#     ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#      ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#       ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#        ^^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.operator.assignment.fenom
+#           ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#            ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#             ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#              ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
 >{var $a >>= $b}
-#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^^^ text.html.fenom source.fenom keyword.control.fenom
-#    ^ text.html.fenom source.fenom
-#     ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#      ^ text.html.fenom source.fenom variable.other.fenom
-#       ^ text.html.fenom source.fenom
-#        ^^^ text.html.fenom source.fenom keyword.operator.assignment.fenom
-#           ^ text.html.fenom source.fenom
-#            ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#             ^ text.html.fenom source.fenom variable.other.fenom
-#              ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+#^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.begin.fenom
+# ^^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.control.fenom
+#    ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#     ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#      ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#       ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#        ^^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.operator.assignment.fenom
+#           ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#            ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#             ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#              ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
 >{++$a}
-#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^^ text.html.fenom source.fenom keyword.operator.arithmetic.fenom
-#   ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#    ^ text.html.fenom source.fenom variable.other.fenom
-#     ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+#^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.begin.fenom
+# ^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.operator.arithmetic.fenom
+#   ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#    ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#     ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
 >{$a++}
-#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#  ^ text.html.fenom source.fenom variable.other.fenom
-#   ^^ text.html.fenom source.fenom keyword.operator.arithmetic.fenom
-#     ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+#^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.begin.fenom
+# ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#  ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#   ^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.operator.arithmetic.fenom
+#     ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
 >{--$a}
-#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^^ text.html.fenom source.fenom keyword.operator.arithmetic.fenom
-#   ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#    ^ text.html.fenom source.fenom variable.other.fenom
-#     ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+#^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.begin.fenom
+# ^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.operator.arithmetic.fenom
+#   ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#    ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#     ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
 >{$a--}
-#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#  ^ text.html.fenom source.fenom variable.other.fenom
-#   ^^ text.html.fenom source.fenom keyword.operator.arithmetic.fenom
-#     ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+#^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.begin.fenom
+# ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#  ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#   ^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.operator.arithmetic.fenom
+#     ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
 >{$a ~ $b}
-#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#  ^ text.html.fenom source.fenom variable.other.fenom
-#   ^ text.html.fenom source.fenom
-#    ^ text.html.fenom source.fenom keyword.operator.string.fenom
-#     ^ text.html.fenom source.fenom
-#      ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#       ^ text.html.fenom source.fenom variable.other.fenom
-#        ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+#^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.begin.fenom
+# ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#  ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#   ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#    ^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.operator.string.fenom
+#     ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#      ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#       ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#        ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
 >{$a ~~ $b}
-#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#  ^ text.html.fenom source.fenom variable.other.fenom
-#   ^ text.html.fenom source.fenom
-#    ^^ text.html.fenom source.fenom keyword.operator.string.fenom
-#      ^ text.html.fenom source.fenom
-#       ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#        ^ text.html.fenom source.fenom variable.other.fenom
-#         ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+#^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.begin.fenom
+# ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#  ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#   ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#    ^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.operator.string.fenom
+#      ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#       ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#        ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#         ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
 >{var $a ~= $b}
-#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^^^ text.html.fenom source.fenom keyword.control.fenom
-#    ^ text.html.fenom source.fenom
-#     ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#      ^ text.html.fenom source.fenom variable.other.fenom
-#       ^ text.html.fenom source.fenom
-#        ^^ text.html.fenom source.fenom keyword.operator.assignment.fenom
-#          ^ text.html.fenom source.fenom
-#           ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#            ^ text.html.fenom source.fenom variable.other.fenom
-#             ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+#^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.begin.fenom
+# ^^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.control.fenom
+#    ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#     ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#      ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#       ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#        ^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.operator.assignment.fenom
+#          ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#           ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#            ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#             ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
 >{$a ? $b : $c}
-#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#  ^ text.html.fenom source.fenom variable.other.fenom
-#   ^ text.html.fenom source.fenom
-#    ^ text.html.fenom source.fenom keyword.operator.fenom
-#     ^ text.html.fenom source.fenom
-#      ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#       ^ text.html.fenom source.fenom variable.other.fenom
-#        ^ text.html.fenom source.fenom
-#         ^ text.html.fenom source.fenom keyword.operator.fenom
-#          ^ text.html.fenom source.fenom
-#           ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#            ^ text.html.fenom source.fenom variable.other.fenom
-#             ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+#^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.begin.fenom
+# ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#  ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#   ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#    ^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.operator.fenom
+#     ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#      ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#       ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#        ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#         ^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.operator.fenom
+#          ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#           ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#            ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#             ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
 >{$a ! $b : $c}
-#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#  ^ text.html.fenom source.fenom variable.other.fenom
-#   ^ text.html.fenom source.fenom
-#    ^ text.html.fenom source.fenom keyword.operator.logical.fenom
-#     ^ text.html.fenom source.fenom
-#      ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#       ^ text.html.fenom source.fenom variable.other.fenom
-#        ^ text.html.fenom source.fenom
-#         ^ text.html.fenom source.fenom keyword.operator.fenom
-#          ^ text.html.fenom source.fenom
-#           ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#            ^ text.html.fenom source.fenom variable.other.fenom
-#             ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+#^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.begin.fenom
+# ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#  ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#   ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#    ^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.operator.logical.fenom
+#     ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#      ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#       ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#        ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#         ^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.operator.fenom
+#          ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#           ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#            ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#             ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
 >{$a ?: $c}
-#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#  ^ text.html.fenom source.fenom variable.other.fenom
-#   ^ text.html.fenom source.fenom
-#    ^^ text.html.fenom source.fenom keyword.operator.ternary.fenom
-#      ^ text.html.fenom source.fenom
-#       ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#        ^ text.html.fenom source.fenom variable.other.fenom
-#         ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+#^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.begin.fenom
+# ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#  ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#   ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#    ^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.operator.ternary.fenom
+#      ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#       ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#        ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#         ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
 >{$a !: $c}
-#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#  ^ text.html.fenom source.fenom variable.other.fenom
-#   ^ text.html.fenom source.fenom
-#    ^^ text.html.fenom source.fenom keyword.operator.ternary.fenom
-#      ^ text.html.fenom source.fenom
-#       ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#        ^ text.html.fenom source.fenom variable.other.fenom
-#         ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+#^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.begin.fenom
+# ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#  ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#   ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#    ^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.operator.ternary.fenom
+#      ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#       ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#        ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#         ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
 >{if $a?}
-#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^^ text.html.fenom source.fenom keyword.control.fenom
-#   ^ text.html.fenom source.fenom
-#    ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#     ^ text.html.fenom source.fenom variable.other.fenom
-#      ^ text.html.fenom source.fenom keyword.operator.fenom
-#       ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+#^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.begin.fenom
+# ^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.control.fenom
+#   ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#    ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#     ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#      ^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.operator.fenom
+#       ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
 >{if $a!}
-#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^^ text.html.fenom source.fenom keyword.control.fenom
-#   ^ text.html.fenom source.fenom
-#    ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#     ^ text.html.fenom source.fenom variable.other.fenom
-#      ^ text.html.fenom source.fenom keyword.operator.logical.fenom
-#       ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+#^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.begin.fenom
+# ^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.control.fenom
+#   ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#    ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#     ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#      ^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.operator.logical.fenom
+#       ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
 >{if $a is $b}
-#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^^ text.html.fenom source.fenom keyword.control.fenom
-#   ^ text.html.fenom source.fenom
-#    ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#     ^ text.html.fenom source.fenom variable.other.fenom
-#      ^ text.html.fenom source.fenom
-#       ^^ text.html.fenom source.fenom keyword.operator.comparison.fenom
-#         ^ text.html.fenom source.fenom
-#          ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#           ^ text.html.fenom source.fenom variable.other.fenom
-#            ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+#^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.begin.fenom
+# ^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.control.fenom
+#   ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#    ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#     ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#      ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#       ^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.operator.comparison.fenom
+#         ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#          ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#           ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#            ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
 >{if $a is integer}
-#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^^ text.html.fenom source.fenom keyword.control.fenom
-#   ^ text.html.fenom source.fenom
-#    ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#     ^ text.html.fenom source.fenom variable.other.fenom
-#      ^ text.html.fenom source.fenom
-#       ^^ text.html.fenom source.fenom keyword.operator.comparison.fenom
-#         ^^^^^^^^ text.html.fenom source.fenom
-#                 ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+#^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.begin.fenom
+# ^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.control.fenom
+#   ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#    ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#     ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#      ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#       ^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.operator.comparison.fenom
+#         ^^^^^^^^ text.html.fenom meta.embedded.block.fenom source.fenom
+#                 ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
 >{if $a is not empty}
-#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^^ text.html.fenom source.fenom keyword.control.fenom
-#   ^ text.html.fenom source.fenom
-#    ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#     ^ text.html.fenom source.fenom variable.other.fenom
-#      ^ text.html.fenom source.fenom
-#       ^^^^^^ text.html.fenom source.fenom keyword.operator.comparison.fenom
-#             ^^^^^^ text.html.fenom source.fenom
-#                   ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+#^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.begin.fenom
+# ^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.control.fenom
+#   ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#    ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#     ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#      ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#       ^^^^^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.operator.comparison.fenom
+#             ^^^^^^ text.html.fenom meta.embedded.block.fenom source.fenom
+#                   ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
 >{if $a is iterable}
-#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^^ text.html.fenom source.fenom keyword.control.fenom
-#   ^ text.html.fenom source.fenom
-#    ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#     ^ text.html.fenom source.fenom variable.other.fenom
-#      ^ text.html.fenom source.fenom
-#       ^^ text.html.fenom source.fenom keyword.operator.comparison.fenom
-#         ^^^^^^^^^ text.html.fenom source.fenom
-#                  ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+#^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.begin.fenom
+# ^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.control.fenom
+#   ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#    ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#     ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#      ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#       ^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.operator.comparison.fenom
+#         ^^^^^^^^^ text.html.fenom meta.embedded.block.fenom source.fenom
+#                  ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
 >{if $a is MyClass}
-#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^^ text.html.fenom source.fenom keyword.control.fenom
-#   ^ text.html.fenom source.fenom
-#    ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#     ^ text.html.fenom source.fenom variable.other.fenom
-#      ^ text.html.fenom source.fenom
-#       ^^ text.html.fenom source.fenom keyword.operator.comparison.fenom
-#         ^^^^^^^^ text.html.fenom source.fenom
-#                 ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+#^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.begin.fenom
+# ^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.control.fenom
+#   ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#    ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#     ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#      ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#       ^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.operator.comparison.fenom
+#         ^^^^^^^^ text.html.fenom meta.embedded.block.fenom source.fenom
+#                 ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
 >{if $a in $b}
-#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^^ text.html.fenom source.fenom keyword.control.fenom
-#   ^ text.html.fenom source.fenom
-#    ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#     ^ text.html.fenom source.fenom variable.other.fenom
-#      ^ text.html.fenom source.fenom
-#       ^^ text.html.fenom source.fenom keyword.operator.comparison.fenom
-#         ^ text.html.fenom source.fenom
-#          ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#           ^ text.html.fenom source.fenom variable.other.fenom
-#            ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+#^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.begin.fenom
+# ^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.control.fenom
+#   ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#    ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#     ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#      ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#       ^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.operator.comparison.fenom
+#         ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#          ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#           ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#            ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
 >{if $a not in $b}
-#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^^ text.html.fenom source.fenom keyword.control.fenom
-#   ^ text.html.fenom source.fenom
-#    ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#     ^ text.html.fenom source.fenom variable.other.fenom
-#      ^ text.html.fenom source.fenom
-#       ^^^^^^ text.html.fenom source.fenom keyword.operator.comparison.fenom
-#             ^ text.html.fenom source.fenom
-#              ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#               ^ text.html.fenom source.fenom variable.other.fenom
-#                ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+#^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.begin.fenom
+# ^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.control.fenom
+#   ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#    ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#     ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#      ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#       ^^^^^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.operator.comparison.fenom
+#             ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#              ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#               ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#                ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
 >{if $a in list $b}
-#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^^ text.html.fenom source.fenom keyword.control.fenom
-#   ^ text.html.fenom source.fenom
-#    ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#     ^ text.html.fenom source.fenom variable.other.fenom
-#      ^ text.html.fenom source.fenom
-#       ^^^^^^^ text.html.fenom source.fenom keyword.operator.comparison.fenom
-#              ^ text.html.fenom source.fenom
-#               ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#                ^ text.html.fenom source.fenom variable.other.fenom
-#                 ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+#^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.begin.fenom
+# ^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.control.fenom
+#   ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#    ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#     ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#      ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#       ^^^^^^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.operator.comparison.fenom
+#              ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#               ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#                ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#                 ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
 >{if $a in keys $b}
-#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^^ text.html.fenom source.fenom keyword.control.fenom
-#   ^ text.html.fenom source.fenom
-#    ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#     ^ text.html.fenom source.fenom variable.other.fenom
-#      ^ text.html.fenom source.fenom
-#       ^^^^^^^ text.html.fenom source.fenom keyword.operator.comparison.fenom
-#              ^ text.html.fenom source.fenom
-#               ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#                ^ text.html.fenom source.fenom variable.other.fenom
-#                 ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+#^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.begin.fenom
+# ^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.control.fenom
+#   ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#    ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#     ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#      ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#       ^^^^^^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.operator.comparison.fenom
+#              ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#               ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#                ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#                 ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
 >{if $a in string $b}
-#^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
-# ^^ text.html.fenom source.fenom keyword.control.fenom
-#   ^ text.html.fenom source.fenom
-#    ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#     ^ text.html.fenom source.fenom variable.other.fenom
-#      ^ text.html.fenom source.fenom
-#       ^^^^^^^^^ text.html.fenom source.fenom keyword.operator.comparison.fenom
-#                ^ text.html.fenom source.fenom
-#                 ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
-#                  ^ text.html.fenom source.fenom variable.other.fenom
-#                   ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
+#^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.begin.fenom
+# ^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.control.fenom
+#   ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#    ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#     ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#      ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#       ^^^^^^^^^ text.html.fenom meta.embedded.block.fenom source.fenom keyword.operator.comparison.fenom
+#                ^ text.html.fenom meta.embedded.block.fenom source.fenom
+#                 ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
+#                  ^ text.html.fenom meta.embedded.block.fenom source.fenom variable.other.fenom
+#                   ^ text.html.fenom meta.embedded.block.fenom source.fenom punctuation.section.embedded.end.fenom
 >
