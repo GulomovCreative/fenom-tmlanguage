@@ -9,3 +9,11 @@ var o = { a: 1, b: 2 };
 {if $debug}console.log("debug");{/if}
 </script>
 <p>after</p>
+{ignore}
+<style>
+.ignored { color: red; }
+</style>
+{/ignore}
+{if:ignore $cdn}
+var item = {cdn: "//example.com/"};
+{/if}

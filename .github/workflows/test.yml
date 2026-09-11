@@ -24,8 +24,5 @@ jobs:
 
       - run: npm ci
 
-      - name: Check the grammar is valid JSON
-        run: node -e "JSON.parse(require('fs').readFileSync('fenom.tmLanguage.json', 'utf8'))"
-
-      - name: Run grammar snapshot tests
+      - name: Run the test suites
         run: npm test

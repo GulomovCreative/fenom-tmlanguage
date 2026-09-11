@@ -20,7 +20,8 @@
     "CHANGELOG.md"
   ],
   "scripts": {
-    "test": "npm run test:snapshots && npm run test:nesting",
+    "test": "npm run test:grammar && npm run test:snapshots && npm run test:nesting",
+    "test:grammar": "node tests/grammar-file.test.mjs",
     "test:snapshots": "vscode-tmgrammar-snap -g fenom.tmLanguage.json -g tests/html-derivative.stub.tmLanguage.json -s text.html.fenom \"tests/**/*.tpl\"",
     "test:nesting": "node tests/nesting/nesting.test.mjs",
     "test:update": "npm run test:snapshots -- --updateSnapshot",

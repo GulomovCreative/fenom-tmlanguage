@@ -10,6 +10,9 @@
           "include": "#ignore"
         },
         {
+          "include": "#ignoreOption"
+        },
+        {
           "include": "#comments"
         },
         {
@@ -23,7 +26,7 @@
   ],
   "repository": {
     "ignore": {
-      "comment": "Everything between {ignore} and {/ignore} is emitted verbatim, so Fenom syntax inside it must not be highlighted. The content is scoped meta.embedded.literal, which this grammar's injection selector already excludes, so the injection stops applying inside the block while the host HTML grammar keeps working. Comments are the one exception: Fenom's lexer handles {* *} before it consults the ignore flag, so they are still stripped inside an ignore block and are still highlighted here.",
+      "comment": "Everything between {ignore} and {/ignore} is emitted verbatim, so Fenom syntax inside it must not be highlighted. A begin/end rule takes over its whole region, which would leave the contents unhighlighted altogether, so the host grammar is included back explicitly -- that is what keeps the <style> element in the documented {ignore} example rendering as CSS. The content is scoped meta.embedded.literal, which this grammar's injection selector excludes, so Fenom itself does not come back with it. Comments are the one exception: Fenom's lexer handles {* *} in an earlier branch than the ignore flag, so they are still stripped inside an ignore block and are still highlighted here.",
       "begin": "(\\{)(ignore)(\\})",
       "beginCaptures": {
         "1": { "name": "punctuation.section.embedded.begin.fenom" },
@@ -41,6 +44,36 @@
       "patterns": [
         {
           "include": "#comments"
+        },
+        {
+          "include": "text.html.derivative"
+        }
+      ]
+    },
+    "ignoreOption": {
+      "comment": "A block tag carrying the :ignore option, as in {if:ignore $cdn}. Fenom stores the tag's name in Template::_ignore and emits everything verbatim until it meets the matching closing tag, so the end pattern back-references the name captured by the begin pattern. That reproduces Fenom's own limitation too: _ignore holds a plain string, so a nested tag of the same name ends the ignored region early in Fenom as well. Comments stay highlighted for the same reason as in the {ignore} tag -- the lexer handles {* *} in an earlier branch than the ignore flag. Known limitation: the tag head is matched up to the first closing brace, so a closing brace inside a string in the head, as in {if:ignore $a == \"}\"}, ends it early.",
+      "begin": "(\\{)([a-zA-Z_][a-zA-Z0-9_]*)((?::(?i:ignoreEnd|escape|raw|strip|ignore))*:(?i:ignore)\\b(?::(?i:ignoreEnd|escape|raw|strip|ignore))*)([^}]*)(\\})",
+      "beginCaptures": {
+        "1": { "name": "punctuation.section.embedded.begin.fenom" },
+        "2": { "name": "keyword.control.fenom" },
+        "3": { "patterns": [{ "include": "#expression" }] },
+        "4": { "patterns": [{ "include": "#expression" }] },
+        "5": { "name": "punctuation.section.embedded.end.fenom" }
+      },
+      "end": "(\\{)(/)(\\2)(\\})",
+      "endCaptures": {
+        "1": { "name": "punctuation.section.embedded.begin.fenom" },
+        "2": { "name": "punctuation.definition.tag.fenom" },
+        "3": { "name": "keyword.control.fenom" },
+        "4": { "name": "punctuation.section.embedded.end.fenom" }
+      },
+      "contentName": "meta.embedded.literal.fenom",
+      "patterns": [
+        {
+          "include": "#comments"
+        },
+        {
+          "include": "text.html.derivative"
         }
       ]
     },
@@ -64,7 +97,7 @@
     "blocks": {
       "patterns": [
         {
-          "comment": "Fenom's lexer checks the character after a brace and treats the brace as literal text when it is whitespace or a closing brace. That is expressed as a negative lookahead rather than as a rule that matches and discards \"{ \", because this grammar is injected with L: priority: a rule that matched would consume the brace before the host grammar saw it, and the CSS inside a <style> element needs that brace to open a property list.",
+          "comment": "Fenom's lexer checks the character after a brace and treats the brace as literal text when it is whitespace or a closing brace. That is expressed as a negative lookahead rather than as a rule that matches and discards \"{ \", because this grammar is injected with L: priority: a rule that matched would consume the brace before the host grammar saw it, and the CSS inside a <style> element needs that brace to open a property list. A tag is an island of Fenom inside an HTML document, so it carries meta.embedded.block alongside source.fenom: the meta scope is what marks the region as embedded, and source.fenom is kept so that anything already targeting it keeps working. Block rather than line because a tag may span several lines -- the documentation shows multi-line {include} and {foreach} tags.",
           "begin": "(\\{)(?![\\s}])",
           "beginCaptures": {
             "1": {
@@ -77,7 +110,6 @@
                 "name": "punctuation.section.embedded.end.fenom"
             }
           },
-          "comment": "A tag is an island of Fenom inside an HTML document, so it carries meta.embedded.block alongside source.fenom: the meta scope is what marks the region as embedded, and source.fenom is kept so that anything already targeting it keeps working. Block rather than line because a tag may span several lines -- the documentation shows multi-line {include} and {foreach} tags.",
           "name": "meta.embedded.block.fenom source.fenom",
           "patterns": [
             {

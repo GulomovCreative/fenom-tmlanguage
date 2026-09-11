@@ -41,6 +41,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   and the braced `"{$user.name|up}"` form.
 - `{ignore} ... {/ignore}`, which now suppresses Fenom highlighting for its
   contents — the documented way to embed CSS or JavaScript in a template.
+- The `:ignore` tag option. A block tag carrying it, as in
+  `{if:ignore $cdn}`, suppresses Fenom highlighting for its body the same way
+  the `{ignore}` tag does, up to the matching closing tag.
 - `meta.embedded.block` and `meta.embedded.line` scopes marking tag bodies and
   interpolations as embedded regions.
 - A snapshot test suite and a nesting suite that checks the grammar against a
@@ -54,6 +57,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   see it: inside a `<style>` element that swallowed the brace opening a CSS
   property list, after which the CSS grammar never recognised `</style>` and
   parsed the rest of the document, `<script>` included, as CSS.
+- An ignored region keeps the highlighting of the language around it. A
+  begin/end rule takes over its whole span, so `{ignore}` wrapping the `<style>`
+  element from the documentation left its CSS with no highlighting at all; the
+  host grammar is now included back into the region, while Fenom stays out.
 - Operator alternatives are ordered longest first. `===` used to be emitted as
   three separate `=` tokens and `<>` as `<` followed by `>`.
 - Division matches a bare `/`. It previously required a trailing space, so
