@@ -318,9 +318,12 @@
 >{import [plus, minus] from 'math.tpl' as math}
 #^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
 # ^^^^^^ text.html.fenom source.fenom keyword.control.fenom
-#       ^^ text.html.fenom source.fenom
+#       ^ text.html.fenom source.fenom
+#        ^ text.html.fenom source.fenom punctuation.section.brackets.begin.fenom
 #         ^^^^ text.html.fenom source.fenom support.function.built-in.fenom
-#             ^^^^^^^^^ text.html.fenom source.fenom
+#             ^^^^^^^ text.html.fenom source.fenom
+#                    ^ text.html.fenom source.fenom punctuation.section.brackets.end.fenom
+#                     ^ text.html.fenom source.fenom
 #                      ^^^^ text.html.fenom source.fenom support.function.built-in.fenom
 #                          ^ text.html.fenom source.fenom
 #                           ^ text.html.fenom source.fenom string.quoted.single.fenom punctuation.definition.string.begin.fenom
@@ -333,8 +336,8 @@
 >{macro.plus x=$num y=100}
 #^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
 # ^^^^^ text.html.fenom source.fenom keyword.control.fenom
-#      ^ text.html.fenom source.fenom
-#       ^^^^ text.html.fenom source.fenom support.function.built-in.fenom
+#      ^ text.html.fenom source.fenom punctuation.accessor.fenom
+#       ^^^^ text.html.fenom source.fenom variable.other.property.fenom
 #           ^ text.html.fenom source.fenom
 #            ^ text.html.fenom source.fenom meta.attribute.fenom variable.parameter.fenom
 #             ^ text.html.fenom source.fenom meta.attribute.fenom keyword.operator.fenom
@@ -348,7 +351,8 @@
 >{cycle ['odd', 'even']}
 #^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom
 # ^^^^^ text.html.fenom source.fenom support.function.built-in.fenom
-#      ^^ text.html.fenom source.fenom
+#      ^ text.html.fenom source.fenom
+#       ^ text.html.fenom source.fenom punctuation.section.brackets.begin.fenom
 #        ^ text.html.fenom source.fenom string.quoted.single.fenom punctuation.definition.string.begin.fenom
 #         ^^^ text.html.fenom source.fenom string.quoted.single.fenom
 #            ^ text.html.fenom source.fenom string.quoted.single.fenom punctuation.definition.string.end.fenom
@@ -356,7 +360,7 @@
 #               ^ text.html.fenom source.fenom string.quoted.single.fenom punctuation.definition.string.begin.fenom
 #                ^^^^ text.html.fenom source.fenom string.quoted.single.fenom
 #                    ^ text.html.fenom source.fenom string.quoted.single.fenom punctuation.definition.string.end.fenom
-#                     ^ text.html.fenom source.fenom
+#                     ^ text.html.fenom source.fenom punctuation.section.brackets.end.fenom
 #                      ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
 >{raw $html}
 #^ text.html.fenom source.fenom punctuation.section.embedded.begin.fenom

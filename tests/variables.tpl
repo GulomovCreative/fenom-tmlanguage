@@ -21,6 +21,7 @@
 {$value@index}
 {$value@first}
 {$value@last}
+{* @key is not a Fenom iteration property; Compiler::foreachProp rejects it *}
 {$value@key}
 {$_modx->resource}
 {$_modx->runSnippet('name')}
