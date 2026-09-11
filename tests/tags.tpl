@@ -28,3 +28,10 @@
 {ignore}{/ignore}
 {if:ignore $cdn}{/if}
 {foreach:ignore:strip $list as $v}{/foreach}
+{block:escape 'name'}{/block}
+{include:raw 'file.tpl'}
+{var:ignoreEnd $a = 1}
+{* s, a, e and i are documented as short codes but Tag has no optS/optA/optE/optI *}
+{if:i $cdn}{/if}
+{$a ? $b : $c}
+{$looong|truncate:80}

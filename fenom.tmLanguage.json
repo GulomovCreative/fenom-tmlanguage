@@ -157,6 +157,18 @@
           "name": "punctuation.definition.tag.fenom"
         },
         {
+          "comment": "Tag options, as in {if:ignore $cdn} or {foreach:ignore:strip ...}. Tag::tagOption resolves an option by looking for a method named opt<Option>, so the accepted set is exactly escape, raw, strip, ignore and ignoreEnd. method_exists is case-insensitive, hence the (?i:...). The short codes s, a, e and i that the documentation tabulates are not implemented -- they would need optS and optA, which do not exist -- so they are not matched here. Listed before the operators so the colon is read as an option separator rather than as a ternary colon.",
+          "captures": {
+            "1": {
+              "name": "punctuation.separator.option.fenom"
+            },
+            "2": {
+              "name": "keyword.other.option.fenom"
+            }
+          },
+          "match": "(:)((?i:ignoreEnd|escape|raw|strip|ignore))\\b"
+        },
+        {
           "comment": "Alternatives are ordered longest first -- all three-character operators, then all two-character, then all one-character -- so that === is one token rather than three, and <<= is not split into << and =. Operators of equal length cannot be prefixes of one another, so their relative order is free, which is what lets each length band be split into several capture groups by category. Several groups therefore share a scope. Group 10 is the concatenating tilde: a bare ~ concatenates when it sits between operands ($a ~ $b) and is bitwise not when it prefixes one (~$a), and trailing whitespace is the only thing that tells them apart, so it must be tried before group 14.",
           "captures": {
             "1": { "name": "keyword.operator.assignment.fenom" },
