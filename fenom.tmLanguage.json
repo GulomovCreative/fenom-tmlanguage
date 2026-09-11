@@ -7,9 +7,6 @@
     "L:text.html.fenom -meta.embedded.literal -comment.block.fenom -string.quoted.single.fenom -string.quoted.double.fenom": {
       "patterns": [
         {
-          "include": "#nonFenom"
-        },
-        {
           "include": "#ignore"
         },
         {
@@ -25,14 +22,6 @@
     { "include": "text.html.derivative" }
   ],
   "repository": {
-    "nonFenom": {
-      "patterns": [
-        {
-          "comment": "A brace is literal text when the next character is whitespace or a closing brace: Fenom's lexer checks for exactly \\n, \\r, \\t, space and } before treating a brace as the start of a tag.",
-          "match": "(\\{)[\\s}]"
-        }
-      ]
-    },
     "ignore": {
       "comment": "Everything between {ignore} and {/ignore} is emitted verbatim, so Fenom syntax inside it must not be highlighted. The content is scoped meta.embedded.literal, which this grammar's injection selector already excludes, so the injection stops applying inside the block while the host HTML grammar keeps working. Comments are the one exception: Fenom's lexer handles {* *} before it consults the ignore flag, so they are still stripped inside an ignore block and are still highlighted here.",
       "begin": "(\\{)(ignore)(\\})",
@@ -75,7 +64,8 @@
     "blocks": {
       "patterns": [
         {
-          "begin": "(\\{)",
+          "comment": "Fenom's lexer checks the character after a brace and treats the brace as literal text when it is whitespace or a closing brace. That is expressed as a negative lookahead rather than as a rule that matches and discards \"{ \", because this grammar is injected with L: priority: a rule that matched would consume the brace before the host grammar saw it, and the CSS inside a <style> element needs that brace to open a property list.",
+          "begin": "(\\{)(?![\\s}])",
           "beginCaptures": {
             "1": {
                 "name": "punctuation.section.embedded.begin.fenom"

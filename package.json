@@ -17,8 +17,10 @@
     "fenom.tmLanguage.json"
   ],
   "scripts": {
-    "test": "vscode-tmgrammar-snap -g fenom.tmLanguage.json -g tests/html-derivative.stub.tmLanguage.json -s text.html.fenom \"tests/**/*.tpl\"",
-    "test:update": "npm test -- --updateSnapshot",
+    "test": "npm run test:snapshots && npm run test:nesting",
+    "test:snapshots": "vscode-tmgrammar-snap -g fenom.tmLanguage.json -g tests/html-derivative.stub.tmLanguage.json -s text.html.fenom \"tests/**/*.tpl\"",
+    "test:nesting": "node tests/nesting/nesting.test.mjs",
+    "test:update": "npm run test:snapshots -- --updateSnapshot",
     "publish:major": "npm version major",
     "publish:minor": "npm version minor",
     "publish:patch": "npm version patch",
@@ -35,6 +37,7 @@
   ],
   "license": "MIT",
   "devDependencies": {
+    "shiki": "^4.4.3",
     "vscode-tmgrammar-test": "^0.1.3"
   }
 }
