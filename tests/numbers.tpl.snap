@@ -5,7 +5,7 @@
 #     ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
 #      ^ text.html.fenom source.fenom variable.other.fenom
 #       ^ text.html.fenom source.fenom
-#        ^ text.html.fenom source.fenom keyword.operator.fenom
+#        ^ text.html.fenom source.fenom keyword.operator.assignment.fenom
 #         ^ text.html.fenom source.fenom
 #          ^^^^ text.html.fenom source.fenom constant.numeric.decimal.fenom
 #              ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
@@ -16,9 +16,9 @@
 #     ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
 #      ^ text.html.fenom source.fenom variable.other.fenom
 #       ^ text.html.fenom source.fenom
-#        ^ text.html.fenom source.fenom keyword.operator.fenom
+#        ^ text.html.fenom source.fenom keyword.operator.assignment.fenom
 #         ^ text.html.fenom source.fenom
-#          ^ text.html.fenom source.fenom keyword.operator.fenom
+#          ^ text.html.fenom source.fenom keyword.operator.arithmetic.fenom
 #           ^^^ text.html.fenom source.fenom constant.numeric.decimal.fenom
 #              ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
 >{var $a = +123}
@@ -28,9 +28,9 @@
 #     ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
 #      ^ text.html.fenom source.fenom variable.other.fenom
 #       ^ text.html.fenom source.fenom
-#        ^ text.html.fenom source.fenom keyword.operator.fenom
+#        ^ text.html.fenom source.fenom keyword.operator.assignment.fenom
 #         ^ text.html.fenom source.fenom
-#          ^ text.html.fenom source.fenom keyword.operator.fenom
+#          ^ text.html.fenom source.fenom keyword.operator.arithmetic.fenom
 #           ^^^ text.html.fenom source.fenom constant.numeric.decimal.fenom
 #              ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
 >{var $a = 0123}
@@ -40,7 +40,7 @@
 #     ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
 #      ^ text.html.fenom source.fenom variable.other.fenom
 #       ^ text.html.fenom source.fenom
-#        ^ text.html.fenom source.fenom keyword.operator.fenom
+#        ^ text.html.fenom source.fenom keyword.operator.assignment.fenom
 #         ^ text.html.fenom source.fenom
 #          ^^^^ text.html.fenom source.fenom constant.numeric.octal.fenom
 #              ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
@@ -51,7 +51,7 @@
 #     ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
 #      ^ text.html.fenom source.fenom variable.other.fenom
 #       ^ text.html.fenom source.fenom
-#        ^ text.html.fenom source.fenom keyword.operator.fenom
+#        ^ text.html.fenom source.fenom keyword.operator.assignment.fenom
 #         ^ text.html.fenom source.fenom
 #          ^^^^ text.html.fenom source.fenom constant.numeric.hex.fenom
 #              ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
@@ -62,7 +62,7 @@
 #     ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
 #      ^ text.html.fenom source.fenom variable.other.fenom
 #       ^ text.html.fenom source.fenom
-#        ^ text.html.fenom source.fenom keyword.operator.fenom
+#        ^ text.html.fenom source.fenom keyword.operator.assignment.fenom
 #         ^ text.html.fenom source.fenom
 #          ^^^^^^^^^^ text.html.fenom source.fenom constant.numeric.binary.fenom
 #                    ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
@@ -73,7 +73,7 @@
 #     ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
 #      ^ text.html.fenom source.fenom variable.other.fenom
 #       ^ text.html.fenom source.fenom
-#        ^ text.html.fenom source.fenom keyword.operator.fenom
+#        ^ text.html.fenom source.fenom keyword.operator.assignment.fenom
 #         ^ text.html.fenom source.fenom
 #          ^^^^^ text.html.fenom source.fenom constant.numeric.float.fenom
 #               ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
@@ -84,7 +84,7 @@
 #     ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
 #      ^ text.html.fenom source.fenom variable.other.fenom
 #       ^ text.html.fenom source.fenom
-#        ^ text.html.fenom source.fenom keyword.operator.fenom
+#        ^ text.html.fenom source.fenom keyword.operator.assignment.fenom
 #         ^ text.html.fenom source.fenom
 #          ^^^^^ text.html.fenom source.fenom constant.numeric.float.fenom
 #               ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
@@ -95,7 +95,7 @@
 #     ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
 #      ^ text.html.fenom source.fenom variable.other.fenom
 #       ^ text.html.fenom source.fenom
-#        ^ text.html.fenom source.fenom keyword.operator.fenom
+#        ^ text.html.fenom source.fenom keyword.operator.assignment.fenom
 #         ^ text.html.fenom source.fenom
 #          ^^^^^ text.html.fenom source.fenom constant.numeric.float.fenom
 #               ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
@@ -112,23 +112,23 @@
 # ^ text.html.fenom source.fenom variable.other.fenom punctuation.definition.variable.fenom
 #  ^ text.html.fenom source.fenom variable.other.fenom
 #   ^ text.html.fenom source.fenom
-#    ^ text.html.fenom source.fenom keyword.operator.fenom
+#    ^ text.html.fenom source.fenom keyword.operator.arithmetic.fenom
 #     ^ text.html.fenom source.fenom
 #      ^ text.html.fenom source.fenom constant.numeric.decimal.fenom
 #       ^ text.html.fenom source.fenom
-#        ^ text.html.fenom source.fenom keyword.operator.fenom
+#        ^ text.html.fenom source.fenom keyword.operator.arithmetic.fenom
 #         ^ text.html.fenom source.fenom
 #          ^ text.html.fenom source.fenom constant.numeric.decimal.fenom
 #           ^ text.html.fenom source.fenom
-#            ^ text.html.fenom source.fenom keyword.operator.fenom
+#            ^ text.html.fenom source.fenom keyword.operator.arithmetic.fenom
 #             ^ text.html.fenom source.fenom
 #              ^ text.html.fenom source.fenom constant.numeric.decimal.fenom
 #               ^ text.html.fenom source.fenom
-#                ^ text.html.fenom source.fenom keyword.operator.fenom
+#                ^ text.html.fenom source.fenom keyword.operator.arithmetic.fenom
 #                 ^ text.html.fenom source.fenom
 #                  ^ text.html.fenom source.fenom constant.numeric.decimal.fenom
 #                   ^ text.html.fenom source.fenom
-#                    ^ text.html.fenom source.fenom keyword.operator.fenom
+#                    ^ text.html.fenom source.fenom keyword.operator.arithmetic.fenom
 #                     ^ text.html.fenom source.fenom
 #                      ^ text.html.fenom source.fenom constant.numeric.decimal.fenom
 #                       ^ text.html.fenom source.fenom punctuation.section.embedded.end.fenom
