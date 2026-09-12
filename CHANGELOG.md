@@ -5,26 +5,7 @@ All notable changes to this project are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
-
-### Fixed
-
-- The line ending test runs on Windows. It reached npm by spawning the command
-  name, which resolves to `npm.cmd` there, and node has refused to spawn a
-  `.cmd` without a shell since the fix for CVE-2024-27980 — so the test threw
-  `EINVAL` on the one platform it exists to protect, and `npm test` could not
-  finish. It now runs npm's entry script with the node already executing,
-  which never looks for `npm.cmd` at all.
-
-- Published files use LF. Every file in the 2.0.2 tarball carried CRLF, which
-  matters because consumers copy the grammar and the language configuration into
-  their own repositories and compare them byte for byte — a comparison that
-  passed or failed depending on the platform the checkout was made on. The
-  commits were never the problem; they have stored LF since the first one. The
-  CRLF came from the working tree the release was packed from: with git's
-  default `core.autocrlf=true` on Windows the checkout converts on the way out,
-  and `npm pack` packs the working tree verbatim. `.gitattributes` now pins the
-  checkout to LF regardless of that setting.
+## [2.1.0] — 2026-09-12
 
 ### Added
 
@@ -72,6 +53,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `tests/line-endings.test.mjs` packs the tarball and reads the archived
     bytes back. It also runs from `prepublishOnly`, since the fault it guards
     against can only occur on the machine cutting the release and never on CI.
+    It reaches npm through npm's own entry script rather than by the command
+    name, because node has refused to spawn a `.cmd` without a shell since the
+    fix for CVE-2024-27980 and on Windows `npm` is `npm.cmd`.
+
+### Fixed
+
+- Published files use LF. Every file in the 2.0.2 tarball carried CRLF, which
+  matters because consumers copy the grammar and the language configuration into
+  their own repositories and compare them byte for byte — a comparison that
+  passed or failed depending on the platform the checkout was made on. The
+  commits were never the problem; they have stored LF since the first one. The
+  CRLF came from the working tree the release was packed from: with git's
+  default `core.autocrlf=true` on Windows the checkout converts on the way out,
+  and `npm pack` packs the working tree verbatim. `.gitattributes` now pins the
+  checkout to LF regardless of that setting.
 
 Folding markers are still not defined, and that is deliberate rather than an
 oversight. The pair that used to circulate, `\{%?` and `%?\}`, matched every
@@ -198,6 +194,7 @@ Published as `fenom-tmlanguage`, the last release under that name.
 Initial release, published as `fenom-tmlanguage`. It was never tagged in git, so
 the link below points at the commit it was cut from.
 
+[2.1.0]: https://github.com/GulomovCreative/fenom-tmlanguage/compare/v2.0.2...v2.1.0
 [2.0.2]: https://github.com/GulomovCreative/fenom-tmlanguage/compare/v2.0.1...v2.0.2
 [2.0.1]: https://github.com/GulomovCreative/fenom-tmlanguage/compare/v2.0.0...v2.0.1
 [2.0.0]: https://github.com/GulomovCreative/fenom-tmlanguage/compare/0cea81a1afde02559372eedf5f27992e431f3315...v2.0.0
