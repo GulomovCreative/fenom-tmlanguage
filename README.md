@@ -115,3 +115,23 @@ The snapshots record what the grammar currently does, not what it ought to do.
 Some fixtures are deliberately invalid Fenom — `{$5foo}`, `{if:i $cdn}`,
 `{$value@key}` — and are there to pin down that the grammar does *not* dress
 them up as valid syntax.
+
+## Releasing
+
+``` sh
+npm run publish:patch   # or publish:minor, publish:major
+```
+
+Each script runs `npm version`, which bumps the version, commits it and tags it.
+The `postversion` hook then pushes the commit and the tag, and publishes last.
+
+The order matters and it is deliberate. The default branch is protected, so a
+push can be rejected; if the publish ran first, that would leave a version on
+npm with no commit or tag behind it, and a published version number can never
+be reused. Pushing first makes the failure recoverable in both directions: a
+rejected push means nothing was published, and a tag that got pushed while the
+publish failed just needs `npm publish` again.
+
+For the same reason, the account publishing a release needs a bypass entry in
+the branch ruleset — otherwise `postversion` stops at the push and the release
+never goes out.

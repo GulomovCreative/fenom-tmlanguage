@@ -15,6 +15,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   the documentation differ. Update the dependency name and every `require`,
   including the paths a VS Code extension points at, which now sit under
   `node_modules/@gulomov/`.
+- `postversion` pushes before it publishes. 2.0.0 had it the other way round, so
+  that a failed publish could not leave a released tag behind in the remote. Now
+  that the default branch is protected, the likelier failure is the opposite one
+  — the publish succeeds and the push is rejected — and that one cannot be
+  repaired, because a published version number can never be reused. A pushed tag
+  with no matching release can be: run `npm publish` again.
 
 ## [2.0.0] — 2026-09-11
 
