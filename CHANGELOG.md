@@ -21,10 +21,61 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- A fourth test suite, `tests/line-endings.test.mjs`, which packs the tarball
-  and reads the archived bytes back. It also runs from `prepublishOnly`, since
-  the fault it guards against can only occur on the machine cutting the release
-  and never on CI.
+- Indentation rules, so `editor.autoIndent` indents the body of a block tag and
+  pulls `{/tag}` back out as it is typed. The language configuration has never
+  carried them — it was written new for 2.0.0 — so consumers that had been
+  shipping their own copy lost the behaviour when they moved to the package.
+  Nothing was removed here; the gap was there from the first release of the
+  file.
+
+  The rules are not the ones those copies carried. They differ in four ways,
+  each of which was a defect:
+
+  - Branch markers — `{else}`, `{elseif}`, `{foreachelse}`, `{forelse}`,
+    `{case}`, `{default}` — are in *both* patterns, not just in
+    `increaseIndentPattern`. VS Code applies the decrease to the line being
+    typed and the increase to the line after it, so a marker listed once
+    indents the branch under it without pulling itself back level with the tag
+    it belongs to, and an `{if}` / `{elseif}` / `{else}` / `{/if}` chain walks
+    a level to the right on every branch.
+  - The closing side covers every tag Fenom registers as a block compiler —
+    `if`, `foreach`, `for`, `while`, `switch`, `block`, `filter`, `macro`,
+    `autoescape`, `escape`, `strip`, `ignore`, `var`, `set`, `add` — rather
+    than the four it used to name. The list is taken from `Fenom::$_actions`,
+    not from the documentation.
+  - `{var}`, `{set}` and `{add}` open a block only when they carry no
+    assignment; `Compiler::setOpen` closes the tag on the spot when it finds
+    one. The pattern excludes `=` for those three, so `{var $foo = 1}` no
+    longer indents the line beneath it while `{var $foo}` still does.
+  - The `{{?…}}?` spelling, which allowed doubled Twig-style braces, is gone.
+    Fenom hardcodes single braces and reads `{{` as a tag opening on `{`.
+
+  A tag that opens and closes on the same line — `{if $a}yes{/if}` in an
+  attribute, say — is matched and then rejected by a lookahead for its own
+  closing tag, so an inline conditional does not indent the markup under it.
+
+- Two more test suites, and the grammar file checks now cover the language
+  configuration as well:
+
+  - `tests/indentation.test.mjs` runs VS Code's two-ended rule over a template
+    covering every block tag, both `{var}` forms and a set of lines that are
+    not blocks at all. Every line is stripped and re-indented from scratch, and
+    the result has to come back identical. Fed the older patterns, it reports
+    the branch chain drifting right one level at a time.
+  - `tests/line-endings.test.mjs` packs the tarball and reads the archived
+    bytes back. It also runs from `prepublishOnly`, since the fault it guards
+    against can only occur on the machine cutting the release and never on CI.
+
+Folding markers are still not defined, and that is deliberate rather than an
+oversight. The pair that used to circulate, `\{%?` and `%?\}`, matched every
+brace in the file — `{$var}` and `{'text'}` opened folding regions. Restricting
+them to paired tags fixes that but not the underlying limitation: folding
+markers are line-based, so a line is a start or an end and never both, and
+`{if $a}yes{/if}` would open a region that never closes and swallow the next
+`{/tag}`. Without markers VS Code falls back to folding by indentation, which
+the rules above now produce correctly, and an editor that registers a folding
+range provider for the language — as an extension declaring `.tpl` an HTML
+participant does — supersedes marker folding anyway.
 
 ## [2.0.2] — 2026-09-12
 

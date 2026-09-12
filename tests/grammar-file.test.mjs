@@ -12,16 +12,20 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const file = path.join(root, 'fenom.tmLanguage.json');
-const source = fs.readFileSync(file, 'utf8');
+const files = ['fenom.tmLanguage.json', 'language-configuration.json'];
+const sources = new Map();
 
 const failures = [];
 
-try {
-  JSON.parse(source);
-} catch (error) {
-  console.error(`\nfenom.tmLanguage.json is not valid JSON: ${error.message}\n`);
-  process.exit(1);
+for (const name of files) {
+  const source = fs.readFileSync(path.join(root, name), 'utf8');
+  try {
+    JSON.parse(source);
+  } catch (error) {
+    console.error(`\n${name} is not valid JSON: ${error.message}\n`);
+    process.exit(1);
+  }
+  sources.set(name, source);
 }
 
 /** Every key that appears more than once in the same object literal. */
@@ -64,10 +68,12 @@ function duplicateKeys(text) {
   return duplicates;
 }
 
-for (const { key, line } of duplicateKeys(source)) {
-  failures.push(
-    `duplicate key ${JSON.stringify(key)} at line ${line} — JSON.parse keeps the last one, so the earlier value never applies`
-  );
+for (const [name, source] of sources) {
+  for (const { key, line } of duplicateKeys(source)) {
+    failures.push(
+      `duplicate key ${JSON.stringify(key)} in ${name} at line ${line} — JSON.parse keeps the last one, so the earlier value never applies`
+    );
+  }
 }
 
 if (failures.length) {
@@ -76,4 +82,4 @@ if (failures.length) {
   process.exit(1);
 }
 
-console.log('✓ fenom.tmLanguage.json is valid JSON with no duplicate keys.');
+console.log(`✓ ${files.join(' and ')} are valid JSON with no duplicate keys.`);

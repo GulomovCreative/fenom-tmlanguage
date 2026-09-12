@@ -68,7 +68,16 @@ above are what `require` resolves to.
 `language-configuration.json` sets `{*` and `*}` as the block comment, so
 toggling a comment produces Fenom's comment rather than an HTML one — the
 difference matters, because a Fenom comment is stripped at compile time and
-never reaches the browser.
+never reaches the browser. It also carries the indentation rules, which is where
+`editor.autoIndent` reads from: the body of a block tag indents as you type and
+`{/tag}` pulls itself back out, along with `{else}`, `{case}` and the other
+branch markers.
+
+It defines no folding markers, deliberately. Folding markers are line-based — a
+line is a start or an end, never both — so `{if $a}yes{/if}` would open a region
+that never closes and swallow the next `{/tag}`. VS Code folds by indentation
+instead, and an extension that declares `.tpl` an HTML participant gets folding
+ranges from the HTML server, which supersedes marker folding in any case.
 
 ### Sublime Text
 
@@ -86,12 +95,19 @@ Atom's grammar loader accepted this format, but GitHub archived Atom in December
 
 ## Development
 
-The grammar is covered by four test suites.
+The grammar is covered by five test suites.
 
-**Grammar file checks.** `tests/grammar-file.test.mjs` checks the file parses
-and carries no duplicate keys — `JSON.parse` keeps the last of a repeated key
-and drops the earlier ones silently, which once left a rule with a comment that
-never applied.
+**Grammar file checks.** `tests/grammar-file.test.mjs` checks that the grammar
+and the language configuration parse and carry no duplicate keys — `JSON.parse`
+keeps the last of a repeated key and drops the earlier ones silently, which once
+left a rule with a comment that never applied.
+
+**Indentation tests.** `tests/indentation.test.mjs` runs VS Code's two-ended
+indentation rule — decrease against the line being typed, increase against the
+line above — over a template covering every block tag Fenom has. Each line is
+stripped of its indentation and re-indented from scratch, and the result has to
+come back identical, so a rule that drifts shows up as the line where the two
+part company.
 
 **Snapshot tests.** Each `tests/*.tpl` fixture has a matching `.snap` file
 recording the scope assigned to every token, so any change in highlighting shows
@@ -115,7 +131,7 @@ runs from `prepublishOnly` as well, because the only machine where the fault can
 occur is the one cutting the release.
 
 ``` sh
-npm test             # all four suites
+npm test             # all five suites
 npm run test:update  # rewrite the snapshots after an intentional change
 ```
 
