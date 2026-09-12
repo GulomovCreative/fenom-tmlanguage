@@ -5,6 +5,28 @@ All notable changes to this project are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Added
+
+- The README documents every scope the grammar assigns. Scope names are what a
+  theme targets, so an undocumented one is one nobody can style; there was no
+  such list before. A test holds it to the grammar in both directions, so it
+  cannot drift.
+
+### Changed
+
+- Releases are published by GitHub Actions from the pushed tag, not from a
+  maintainer's machine. This is the same fault that put CRLF into 2.0.2: what
+  reached npm depended on the machine the release was cut from. Packages
+  published this way also carry npm
+  [provenance](https://docs.npmjs.com/generating-provenance-statements) — the
+  package page states which repository, workflow and commit built the tarball,
+  and npm verifies that statement itself. Nothing changes in how the package is
+  installed or used.
+- Every release now gets a GitHub release, with that version's changelog
+  section as its body. Previously tags were pushed without one.
+
 ## [2.1.0] — 2026-09-12
 
 ### Added
@@ -194,6 +216,7 @@ Published as `fenom-tmlanguage`, the last release under that name.
 Initial release, published as `fenom-tmlanguage`. It was never tagged in git, so
 the link below points at the commit it was cut from.
 
+[Unreleased]: https://github.com/GulomovCreative/fenom-tmlanguage/compare/v2.1.0...HEAD
 [2.1.0]: https://github.com/GulomovCreative/fenom-tmlanguage/compare/v2.0.2...v2.1.0
 [2.0.2]: https://github.com/GulomovCreative/fenom-tmlanguage/compare/v2.0.1...v2.0.2
 [2.0.1]: https://github.com/GulomovCreative/fenom-tmlanguage/compare/v2.0.0...v2.0.1

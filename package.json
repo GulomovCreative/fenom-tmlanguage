@@ -23,8 +23,11 @@
     "access": "public"
   },
   "scripts": {
-    "test": "npm run test:grammar && npm run test:indentation && npm run test:snapshots && npm run test:nesting && npm run test:line-endings",
+    "test": "npm run test:grammar && npm run test:readme && npm run test:release && npm run test:indentation && npm run test:snapshots && npm run test:nesting && npm run test:line-endings && npm run test:package",
     "test:grammar": "node tests/grammar-file.test.mjs",
+    "test:readme": "node --test tests/readme.test.mjs",
+    "test:release": "node --test tests/release.test.mjs",
+    "test:package": "node --test tests/package.test.mjs",
     "test:indentation": "node tests/indentation.test.mjs",
     "test:line-endings": "node tests/line-endings.test.mjs",
     "test:snapshots": "vscode-tmgrammar-snap -g fenom.tmLanguage.json -g tests/html-derivative.stub.tmLanguage.json -s text.html.fenom \"tests/**/*.tpl\"",
@@ -34,7 +37,9 @@
     "publish:minor": "npm version minor",
     "publish:patch": "npm version patch",
     "prepublishOnly": "npm test",
-    "postversion": "git push && git push --tags && npm publish"
+    "preversion": "node scripts/preversion.js",
+    "version": "node scripts/version.js",
+    "postversion": "git push origin master && git push origin --tags"
   },
   "repository": {
     "type": "git",
