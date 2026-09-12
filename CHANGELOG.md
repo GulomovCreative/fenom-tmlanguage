@@ -9,6 +9,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+- The line ending test runs on Windows. It reached npm by spawning the command
+  name, which resolves to `npm.cmd` there, and node has refused to spawn a
+  `.cmd` without a shell since the fix for CVE-2024-27980 — so the test threw
+  `EINVAL` on the one platform it exists to protect, and `npm test` could not
+  finish. It now runs npm's entry script with the node already executing,
+  which never looks for `npm.cmd` at all.
+
 - Published files use LF. Every file in the 2.0.2 tarball carried CRLF, which
   matters because consumers copy the grammar and the language configuration into
   their own repositories and compare them byte for byte — a comparison that

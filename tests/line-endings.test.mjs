@@ -14,7 +14,7 @@
 // `prepublishOnly` as well: there it runs on the machine cutting the release,
 // which is the only machine where the fault can occur.
 
-import { execFileSync } from 'node:child_process'
+import { execFileSync, execSync } from 'node:child_process'
 import { gunzipSync } from 'node:zlib'
 import { mkdtempSync, readFileSync, rmSync } from 'node:fs'
 import { tmpdir } from 'node:os'
@@ -47,18 +47,36 @@ function* tarEntries(archive) {
   }
 }
 
+// On Windows `npm` is npm.cmd, and since the fix for CVE-2024-27980 node
+// refuses to spawn a .cmd without a shell — it throws EINVAL rather than
+// running it. Both ways round that are below, and neither hands a path to a
+// shell unquoted.
+function pack(destination) {
+  const options = { cwd: process.cwd(), encoding: 'utf8', stdio: ['ignore', 'pipe', 'inherit'] }
+  const cli = process.env.npm_execpath
+
+  // npm points npm_execpath at its own entry script, so the ways this test is
+  // meant to run — `npm test` and `prepublishOnly` — can run that script with
+  // the node already executing, and never look for npm.cmd at all.
+  if (cli && cli.endsWith('.js')) {
+    return execFileSync(
+      process.execPath,
+      [cli, 'pack', '--json', '--pack-destination', destination],
+      options
+    )
+  }
+
+  // Run by hand, outside npm. A shell can find npm.cmd, but node passes
+  // arguments to a shell as it received them, so the command is quoted here.
+  return execSync(`npm pack --json --pack-destination "${destination}"`, options)
+}
+
 const destination = mkdtempSync(join(tmpdir(), 'fenom-pack-'))
 let failures = []
 let checked = 0
 
 try {
-  const output = execFileSync(
-    process.platform === 'win32' ? 'npm.cmd' : 'npm',
-    ['pack', '--json', '--pack-destination', destination],
-    { cwd: process.cwd(), encoding: 'utf8', stdio: ['ignore', 'pipe', 'inherit'] }
-  )
-
-  const [{ filename }] = JSON.parse(output)
+  const [{ filename }] = JSON.parse(pack(destination))
   const archive = gunzipSync(readFileSync(join(destination, filename)))
 
   for (const { name, content } of tarEntries(archive)) {
