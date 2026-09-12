@@ -1,5 +1,9 @@
 # @gulomov/fenom-tmlanguage
 
+[![npm](https://img.shields.io/npm/v/@gulomov/fenom-tmlanguage)](https://www.npmjs.com/package/@gulomov/fenom-tmlanguage)
+[![tests](https://github.com/GulomovCreative/fenom-tmlanguage/actions/workflows/test.yml/badge.svg)](https://github.com/GulomovCreative/fenom-tmlanguage/actions/workflows/test.yml)
+[![license](https://img.shields.io/npm/l/@gulomov/fenom-tmlanguage)](LICENSE)
+
 A TextMate grammar for the [Fenom](https://github.com/fenom-template/fenom)
 template engine, for editors and plugins that consume TextMate grammars.
 
