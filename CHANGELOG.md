@@ -5,14 +5,27 @@ All notable changes to this project are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [2.0.1] — 2026-09-12
+
+### Changed
+
+- Published as `@gulomov/fenom-tmlanguage` from this release on. The unscoped
+  `fenom-tmlanguage` is deprecated and stops at 2.0.0, whose grammar is
+  identical to this one — only the package name, the publish configuration and
+  the documentation differ. Update the dependency name and every `require`,
+  including the paths a VS Code extension points at, which now sit under
+  `node_modules/@gulomov/`.
+
+## [2.0.0] — 2026-09-11
+
+Published as `fenom-tmlanguage`, the last release under that name.
 
 ### Breaking
 
 - The root export is now the **path** to the grammar file rather than the parsed
   grammar object. `exports` previously mapped `.` straight to the JSON, which
-  shadowed `main` on Node >= 12.17 and left `index.js` dead; `require('fenom-tmlanguage')`
-  therefore returned an object. It now resolves through `index.js` as intended.
+  shadowed `main` on Node >= 12.17 and left `index.js` dead, so requiring the
+  package returned an object. It now resolves through `index.js` as intended.
   Read the grammar as an object from the `./fenom.tmLanguage.json` subpath.
 
 ### Added
@@ -46,8 +59,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   the `{ignore}` tag does, up to the matching closing tag.
 - `meta.embedded.block` and `meta.embedded.line` scopes marking tag bodies and
   interpolations as embedded regions.
-- A snapshot test suite and a nesting suite that checks the grammar against a
-  real HTML grammar with CSS and JavaScript inside it, plus CI running both on
+- Three test suites — snapshots of every token's scope, a nesting suite that
+  checks the grammar against a real HTML grammar with CSS and JavaScript inside
+  it, and integrity checks on the grammar file — plus CI running all of them on
   Node 18, 20 and 22.
 
 ### Fixed
@@ -83,3 +97,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   `postversion` publishes before it pushes.
 - `files` restricts the published package to the grammar, the language
   configuration and the entry point.
+
+## [1.0.0] — 2023-11-05
+
+Initial release, published as `fenom-tmlanguage`. It was never tagged in git, so
+the link below points at the commit it was cut from.
+
+[2.0.1]: https://github.com/GulomovCreative/fenom-tmlanguage/compare/v2.0.0...v2.0.1
+[2.0.0]: https://github.com/GulomovCreative/fenom-tmlanguage/compare/0cea81a1afde02559372eedf5f27992e431f3315...v2.0.0
+[1.0.0]: https://github.com/GulomovCreative/fenom-tmlanguage/commit/0cea81a1afde02559372eedf5f27992e431f3315
