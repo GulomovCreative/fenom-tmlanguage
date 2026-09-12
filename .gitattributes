@@ -1,0 +1,4 @@
+# Every file here is text and is published as-is to npm, where consumers copy
+# it into their own repositories and compare it byte for byte. Pin the checkout
+# to LF so the bytes do not depend on the platform the release was cut from.
+* text=auto eol=lf

@@ -23,14 +23,16 @@
     "access": "public"
   },
   "scripts": {
-    "test": "npm run test:grammar && npm run test:snapshots && npm run test:nesting",
+    "test": "npm run test:grammar && npm run test:snapshots && npm run test:nesting && npm run test:line-endings",
     "test:grammar": "node tests/grammar-file.test.mjs",
+    "test:line-endings": "node tests/line-endings.test.mjs",
     "test:snapshots": "vscode-tmgrammar-snap -g fenom.tmLanguage.json -g tests/html-derivative.stub.tmLanguage.json -s text.html.fenom \"tests/**/*.tpl\"",
     "test:nesting": "node tests/nesting/nesting.test.mjs",
     "test:update": "npm run test:snapshots -- --updateSnapshot",
     "publish:major": "npm version major",
     "publish:minor": "npm version minor",
     "publish:patch": "npm version patch",
+    "prepublishOnly": "npm test",
     "postversion": "git push && git push --tags && npm publish"
   },
   "repository": {

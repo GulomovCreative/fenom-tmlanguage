@@ -5,6 +5,27 @@ All notable changes to this project are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Fixed
+
+- Published files use LF. Every file in the 2.0.2 tarball carried CRLF, which
+  matters because consumers copy the grammar and the language configuration into
+  their own repositories and compare them byte for byte — a comparison that
+  passed or failed depending on the platform the checkout was made on. The
+  commits were never the problem; they have stored LF since the first one. The
+  CRLF came from the working tree the release was packed from: with git's
+  default `core.autocrlf=true` on Windows the checkout converts on the way out,
+  and `npm pack` packs the working tree verbatim. `.gitattributes` now pins the
+  checkout to LF regardless of that setting.
+
+### Added
+
+- A fourth test suite, `tests/line-endings.test.mjs`, which packs the tarball
+  and reads the archived bytes back. It also runs from `prepublishOnly`, since
+  the fault it guards against can only occur on the machine cutting the release
+  and never on CI.
+
 ## [2.0.2] — 2026-09-12
 
 ### Changed
