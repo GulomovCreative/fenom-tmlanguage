@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+- `LICENSE` now names both copyright holders. It carried only Modix GmbH, whose
+  grammar this one started from, and not the author of everything written since;
+  the manifest named only the author. Both notices are required: MIT keeps the
+  original one in anything derived from it, and the second covers the current
+  work. A test holds both in place.
+
 ### Added
 
 - The README documents every scope the grammar assigns. Scope names are what a
