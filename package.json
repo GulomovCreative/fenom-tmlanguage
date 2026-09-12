@@ -1,6 +1,6 @@
 {
   "name": "@gulomov/fenom-tmlanguage",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "TextMate grammar files for Fenom template engine syntax for VS Code, Sublime Text, and Atom",
   "author": {
     "name": "Gulomov Bakhtovar",
