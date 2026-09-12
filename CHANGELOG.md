@@ -9,10 +9,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Breaking
 
+- The package is now published as `@gulomov/fenom-tmlanguage`. The unscoped
+  `fenom-tmlanguage` is deprecated and stays at 1.0.0. Update the dependency and
+  every `require` — including the paths a VS Code extension points at, which now
+  live under `node_modules/@gulomov/`.
 - The root export is now the **path** to the grammar file rather than the parsed
   grammar object. `exports` previously mapped `.` straight to the JSON, which
-  shadowed `main` on Node >= 12.17 and left `index.js` dead; `require('fenom-tmlanguage')`
-  therefore returned an object. It now resolves through `index.js` as intended.
+  shadowed `main` on Node >= 12.17 and left `index.js` dead, so requiring the
+  package returned an object. It now resolves through `index.js` as intended.
   Read the grammar as an object from the `./fenom.tmLanguage.json` subpath.
 
 ### Added

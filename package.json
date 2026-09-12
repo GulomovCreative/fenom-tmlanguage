@@ -1,5 +1,5 @@
 {
-  "name": "fenom-tmlanguage",
+  "name": "@gulomov/fenom-tmlanguage",
   "version": "1.0.0",
   "description": "TextMate grammar files for Fenom template engine syntax for VS Code, Sublime Text, and Atom",
   "author": {
@@ -19,6 +19,9 @@
     "language-configuration.json",
     "CHANGELOG.md"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "test": "npm run test:grammar && npm run test:snapshots && npm run test:nesting",
     "test:grammar": "node tests/grammar-file.test.mjs",
