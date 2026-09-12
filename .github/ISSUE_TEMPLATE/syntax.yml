@@ -1,0 +1,23 @@
+name: Unsupported syntax
+description: A Fenom construct the grammar does not know about
+labels: [enhancement]
+body:
+  - type: textarea
+    id: syntax
+    attributes:
+      label: The construct
+      render: html
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Where it is defined
+      description: >
+        A link to the Fenom documentation, or better, to the part of
+        fenom-template/fenom that implements it — `Fenom::$_actions` for block
+        tags, `Compiler` for what a tag does with its arguments, `Tag::tagOption`
+        for tag options. The grammar follows the engine, so that is what settles
+        whether a construct is real.
+    validations:
+      required: true
