@@ -1,4 +1,4 @@
-# fenom-tmlanguage
+# @gulomov/fenom-tmlanguage
 
 A TextMate grammar for the [Fenom](https://github.com/fenom-template/fenom)
 template engine, for editors and plugins that consume TextMate grammars.
@@ -10,15 +10,19 @@ the editor's own HTML grammar — including CSS in `<style>` and JavaScript in
 ## Installation
 
 ``` sh
-npm install fenom-tmlanguage
+npm install @gulomov/fenom-tmlanguage
 ```
+
+> Previously published as `fenom-tmlanguage`. That name is deprecated and stops
+> at 2.0.0; everything from 2.0.1 on is released under the scope. The grammar is
+> the same — only the package name changed.
 
 The package exposes the grammar three ways:
 
 ``` js
-const grammarPath = require('fenom-tmlanguage')            // absolute path to the .json
-const grammar = require('fenom-tmlanguage/fenom.tmLanguage.json')
-const config = require('fenom-tmlanguage/language-configuration.json')
+const grammarPath = require('@gulomov/fenom-tmlanguage')            // absolute path to the .json
+const grammar = require('@gulomov/fenom-tmlanguage/fenom.tmLanguage.json')
+const config = require('@gulomov/fenom-tmlanguage/language-configuration.json')
 ```
 
 ## Usage
@@ -36,14 +40,14 @@ point at the two files:
         "id": "fenom",
         "aliases": ["Fenom"],
         "extensions": [".tpl"],
-        "configuration": "./node_modules/fenom-tmlanguage/language-configuration.json"
+        "configuration": "./node_modules/@gulomov/fenom-tmlanguage/language-configuration.json"
       }
     ],
     "grammars": [
       {
         "language": "fenom",
         "scopeName": "text.html.fenom",
-        "path": "./node_modules/fenom-tmlanguage/fenom.tmLanguage.json",
+        "path": "./node_modules/@gulomov/fenom-tmlanguage/fenom.tmLanguage.json",
         "embeddedLanguages": {
           "source.fenom": "fenom",
           "text.html": "html"
