@@ -86,7 +86,7 @@ Atom's grammar loader accepted this format, but GitHub archived Atom in December
 
 ## Development
 
-The grammar is covered by three test suites.
+The grammar is covered by four test suites.
 
 **Grammar file checks.** `tests/grammar-file.test.mjs` checks the file parses
 and carries no duplicate keys — `JSON.parse` keeps the last of a repeated key
@@ -106,8 +106,16 @@ that opens a CSS property list and left the rest of the document, `</style>`
 included, parsed as CSS. The snapshot suite cannot see that class of bug,
 because it stubs the HTML grammar out.
 
+**Line ending tests.** `tests/line-endings.test.mjs` packs the tarball and reads
+the archived bytes back, checking every published file for CR. Consumers copy
+these files into their own repositories and compare them byte for byte, so the
+bytes must not depend on the platform a release was cut from. `.gitattributes`
+pins the checkout to LF; this suite is the guard that the pinning held, and it
+runs from `prepublishOnly` as well, because the only machine where the fault can
+occur is the one cutting the release.
+
 ``` sh
-npm test             # all three suites
+npm test             # all four suites
 npm run test:update  # rewrite the snapshots after an intentional change
 ```
 
