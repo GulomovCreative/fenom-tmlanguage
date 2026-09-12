@@ -5,7 +5,7 @@ All notable changes to this project are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [2.0.2] — 2026-09-12
 
 ### Changed
 
@@ -119,6 +119,7 @@ Published as `fenom-tmlanguage`, the last release under that name.
 Initial release, published as `fenom-tmlanguage`. It was never tagged in git, so
 the link below points at the commit it was cut from.
 
+[2.0.2]: https://github.com/GulomovCreative/fenom-tmlanguage/compare/v2.0.1...v2.0.2
 [2.0.1]: https://github.com/GulomovCreative/fenom-tmlanguage/compare/v2.0.0...v2.0.1
 [2.0.0]: https://github.com/GulomovCreative/fenom-tmlanguage/compare/0cea81a1afde02559372eedf5f27992e431f3315...v2.0.0
 [1.0.0]: https://github.com/GulomovCreative/fenom-tmlanguage/commit/0cea81a1afde02559372eedf5f27992e431f3315
