@@ -15,6 +15,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   the documentation differ. Update the dependency name and every `require`,
   including the paths a VS Code extension points at, which now sit under
   `node_modules/@gulomov/`.
+- The npm description no longer offers the package "for VS Code, Sublime Text,
+  and Atom". Sublime does not load `.tmLanguage.json` without converting it
+  first, and Atom was archived in 2022, so that line promised two things the
+  file does not do. It now says what the grammar is instead. Keywords lowercased
+  and widened for search.
 
 ## [2.0.0] — 2026-09-11
 
