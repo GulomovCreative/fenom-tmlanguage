@@ -1,7 +1,7 @@
 {
   "name": "@gulomov/fenom-tmlanguage",
   "version": "2.0.1",
-  "description": "TextMate grammar files for Fenom template engine syntax for VS Code, Sublime Text, and Atom",
+  "description": "TextMate grammar for the Fenom template engine, injected over HTML so markup, CSS and JavaScript keep their own highlighting",
   "author": {
     "name": "Gulomov Bakhtovar",
     "email": "gulomovcreative@gmail.com"
@@ -39,8 +39,13 @@
   },
   "keywords": [
     "fenom",
-    "TextMate",
-    "syntax"
+    "textmate",
+    "tmlanguage",
+    "grammar",
+    "syntax-highlighting",
+    "vscode",
+    "template",
+    "tpl"
   ],
   "license": "MIT",
   "devDependencies": {
