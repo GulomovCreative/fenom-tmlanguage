@@ -118,6 +118,12 @@ them up as valid syntax.
 
 ## Releasing
 
+Rename the changelog's `Unreleased` heading to the version being cut, with the
+date, and commit that first. Everything in the package — the changelog and the
+npm description among it — is read from the working tree at publish time, so
+anything left unmerged is simply not in the release. Both have gone out wrong
+once for exactly that reason.
+
 ``` sh
 npm run publish:patch   # or publish:minor, publish:major
 ```
