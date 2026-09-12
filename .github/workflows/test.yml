@@ -4,20 +4,46 @@ on:
   push:
     branches: [master]
   pull_request:
+  # The suites run over third-party grammars -- shiki's HTML, CSS and
+  # JavaScript grammars among them -- which are released on their own schedule.
+  # package-lock pins them, so a breaking release is invisible until dependabot
+  # opens its monthly pull request. A weekly run on the newest versions shows it
+  # earlier, and separately from any change of ours.
+  schedule:
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+
+# The workflow only reads the repository: nothing is published, commented on or
+# written back. Saying so explicitly closes write access down in case the
+# repository's default permissions are wider.
+permissions:
+  contents: read
+
+# A new push to the same branch cancels the previous run: there is no point
+# holding a queue of checks for code that is already superseded.
+#
+# master is exempt. Every commit there is a state a release can be cut from, so
+# its result has to be known; without the condition, quick successive merges
+# would cancel the checks for the commits in between and leave them cancelled in
+# the history.
+concurrency:
+  group: test-${{ github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/master' }}
 
 jobs:
   test:
+    name: Tests (Node ${{ matrix.node-version }})
     runs-on: ubuntu-latest
 
     strategy:
       fail-fast: false
       matrix:
-        node-version: [18.x, 20.x, 22.x]
+        node-version: ['20', '22', '24']
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version: ${{ matrix.node-version }}
           cache: npm
@@ -26,3 +52,43 @@ jobs:
 
       - name: Run the test suites
         run: npm test
+
+  package:
+    name: Package contents
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+          cache: npm
+
+      - run: npm ci
+
+      # What the published tarball holds and what installing it gives you.
+      # This runs inside npm test as well, on every version of Node above; it
+      # is a job of its own so that it reports under its own name, because it
+      # is the check standing between a mistake and an irreversible publish.
+      - name: Check what gets published
+        run: npm run test:package
+
+  fresh-deps:
+    name: Newest dependencies
+    # Only on a schedule and on demand. On every pull request this would make
+    # the checks depend on other people's releases, and a red result would mean
+    # something other than "this change is wrong".
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+
+      # No package-lock: this installs the newest versions the ranges in
+      # package.json allow -- what someone cloning the repository today gets.
+      - run: npm install --no-package-lock --no-audit --no-fund
+
+      - run: npm test

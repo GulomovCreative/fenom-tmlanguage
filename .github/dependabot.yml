@@ -1,0 +1,16 @@
+version: 2
+updates:
+  # The tokenizer and the grammars every test here runs against.
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 3
+
+  # Actions in the workflows are pinned to a major version and do not move on
+  # their own.
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 3

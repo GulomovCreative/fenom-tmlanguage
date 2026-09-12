@@ -1,0 +1,22 @@
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 2
+
+# Fixtures are samples of real templates: their whitespace is significant,
+# trailing whitespace included, and editing it changes the snapshots.
+[tests/*.tpl]
+trim_trailing_whitespace = false
+
+# Snapshots are generated and compared byte for byte.
+[tests/*.snap]
+trim_trailing_whitespace = false
+insert_final_newline = false
+
+[tests/nesting/*.html]
+trim_trailing_whitespace = false

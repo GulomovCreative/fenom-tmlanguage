@@ -93,9 +93,115 @@ formats are supported.
 Atom's grammar loader accepted this format, but GitHub archived Atom in December
 2022 and it no longer receives updates.
 
+## Scopes
+
+The grammar's own scope is `text.html.fenom`. It is an injection rather than a
+grammar of its own: the editor's HTML grammar highlights the markup, and these
+rules are applied on top of it wherever a Fenom tag appears — except inside
+comments, strings and `{ignore}` blocks, where the injection is deliberately
+switched off.
+
+Every scope below ends in `.fenom`, so a theme can target the whole language
+with one selector, or any single construct with a longer one.
+
+### Tags
+
+| Part | Scope |
+|---|---|
+| `{` and `}` around a tag | `punctuation.section.embedded.begin.fenom`, `punctuation.section.embedded.end.fenom` |
+| everything between them | `meta.embedded.block.fenom source.fenom` |
+| `{$foo}` inside a double-quoted string | `meta.embedded.line.fenom source.fenom` |
+| `/` in a closing tag, as in `{/if}` | `punctuation.definition.tag.fenom` |
+| tag names and control words — `if`, `foreach`, `block`, `macro`, … | `keyword.control.fenom` |
+| `:` before a tag option | `punctuation.separator.option.fenom` |
+| the option itself — `ignore`, `ignoreEnd`, `escape`, `raw`, `strip` | `keyword.other.option.fenom` |
+| the body of `{ignore}`, and of a tag carrying `:ignore` | `meta.embedded.literal.fenom` |
+
+A brace followed by whitespace or by another brace is left to the host grammar,
+because Fenom's own lexer reads it as literal text. That is what keeps the brace
+opening a CSS property list inside `<style>` out of the injection's hands.
+
+Only the five options above are matched. `Tag::tagOption` resolves an option by
+looking for a method named `opt<Option>`, so that set is exactly what exists —
+the short codes `s`, `a`, `e` and `i` that the documentation tabulates would
+need `optS` and `optA`, which do not.
+
+### Comments
+
+| Part | Scope |
+|---|---|
+| `{* … *}` | `comment.block.fenom` |
+| `{*` | `punctuation.definition.comment.begin.fenom` |
+| `*}` | `punctuation.definition.comment.end.fenom` |
+| a second `{*` inside a comment | `invalid.illegal.characters-not-allowed-here.fenom` |
+
+Comments do not nest — Fenom closes one at the first `*}` — so a `{*` inside a
+comment is marked as the mistake it is, rather than quietly opening nothing.
+
+### Variables
+
+| Part | Scope |
+|---|---|
+| `$foo` | `variable.other.fenom` |
+| the `$` | `punctuation.definition.variable.fenom` |
+| `$.get`, `$.const`, `$.tpl` and the other accessors | `variable.other.global.fenom` |
+| the accessor name after `$.`, and `$_modx` | `support.variable.fenom` |
+| `.` in `$foo.bar` and `$.get.debug` | `punctuation.accessor.fenom` |
+| the property name after it | `variable.other.property.fenom` |
+| `->` | `keyword.operator.fenom` |
+| the method name in `$foo->bar()` | `meta.function-call.object.fenom` |
+| the `(` and `)` of that call | `punctuation.definition.variable.fenom` |
+| `@` before an iteration property | `punctuation.accessor.fenom` |
+| `index`, `first` and `last` after it | `support.variable.property.fenom` |
+
+Accessor names after `$.` are matched by shape rather than against Fenom's
+built-in list, because `addAccessor()` lets a project register its own and a
+fixed list would leave those unhighlighted. Iteration properties are the
+opposite case: `Compiler::foreachProp` raises a compile error for anything but
+those three, so only those three are recognised and an unknown one falls
+through to the plain `@` operator.
+
+### Values
+
+| Part | Scope |
+|---|---|
+| `'…'` | `string.quoted.single.fenom` |
+| `"…"` | `string.quoted.double.fenom` |
+| the quotes | `punctuation.definition.string.begin.fenom`, `punctuation.definition.string.end.fenom` |
+| `\n`, `\x41`, `\\` and the other escapes | `constant.character.escape.fenom` |
+| `true` and `false`, in either case | `constant.language.fenom` |
+| `42` | `constant.numeric.decimal.fenom` |
+| `1.5`, `2e10` | `constant.numeric.float.fenom` |
+| `0x1F` | `constant.numeric.hex.fenom` |
+| `0b1010` | `constant.numeric.binary.fenom` |
+| `0755` | `constant.numeric.octal.fenom` |
+| `[` and `]`, both for indexing and for array literals | `punctuation.section.brackets.begin.fenom`, `punctuation.section.brackets.end.fenom` |
+
+### Operators, modifiers and parameters
+
+| Part | Scope |
+|---|---|
+| `\|` before a modifier | `keyword.operator.fenom` |
+| the modifier name after it | `entity.name.function.fenom` |
+| `=`, `+=`, `~=`, `\|=`, `<<=`, … | `keyword.operator.assignment.fenom` |
+| `==`, `!=`, `<`, `>=`, `is`, `is not`, `in`, `in list`, … | `keyword.operator.comparison.fenom` |
+| `&&`, `\|\|`, `and`, `or`, `xor`, `!` | `keyword.operator.logical.fenom` |
+| `+`, `-`, `*`, `/`, `%`, `++`, `--` | `keyword.operator.arithmetic.fenom` |
+| `&`, `\|`, `^`, `~`, `<<`, `>>` | `keyword.operator.bitwise.fenom` |
+| `~` between operands, and `~~` | `keyword.operator.string.fenom` |
+| `?:` and `!:` | `keyword.operator.ternary.fenom` |
+| `?`, `:`, `@` and the rest | `keyword.operator.fenom` |
+| `name=` in a tag's parameter list | `meta.attribute.fenom` |
+| the name in it | `variable.parameter.fenom` |
+| `from`, `as`, `plus`, `capture`, `default`, `cycle` | `support.function.built-in.fenom` |
+
+A bare `~` is the concatenation operator when it sits between operands and
+bitwise not when it prefixes one, which is why the two carry different scopes
+for the same character.
+
 ## Development
 
-The grammar is covered by five test suites.
+The grammar is covered by eight test suites.
 
 **Grammar file checks.** `tests/grammar-file.test.mjs` checks that the grammar
 and the language configuration parse and carry no duplicate keys — `JSON.parse`
@@ -130,8 +236,26 @@ pins the checkout to LF; this suite is the guard that the pinning held, and it
 runs from `prepublishOnly` as well, because the only machine where the fault can
 occur is the one cutting the release.
 
+**README checks.** `tests/readme.test.mjs` holds the Scopes section above to
+the grammar in both directions: a scope the grammar assigns and the README does
+not list fails the suite, and so does a scope the README still lists after it
+was renamed away. Scope names are what themes target, so an undocumented one is
+one nobody can style.
+
+**Package checks.** `tests/package.test.mjs` packs the tarball, installs it into
+an empty project and loads it by name. The `exports` field changes how names
+resolve, so requiring a file by relative path — what every other suite does —
+keeps passing even when the package is broken for everyone installing it. The
+list of published files is pinned down here too.
+
+**Release checks.** `tests/release.test.mjs` covers the scripts under
+`scripts/`: what refuses to release, and how the changelog's `Unreleased`
+section is closed into a version. Both run at moments that are awkward to
+reach on purpose, so what can be decided from text alone lives in pure
+functions and is tested here.
+
 ``` sh
-npm test             # all five suites
+npm test             # all eight suites
 npm run test:update  # rewrite the snapshots after an intentional change
 ```
 
@@ -146,26 +270,28 @@ them up as valid syntax.
 
 ## Releasing
 
-Rename the changelog's `Unreleased` heading to the version being cut, with the
-date, and commit that first. Everything in the package — the changelog and the
-npm description among it — is read from the working tree at publish time, so
-anything left unmerged is simply not in the release. Both have gone out wrong
-once for exactly that reason.
+Write changelog entries under `## [Unreleased]` as you go. That is the whole
+preparation — the version number, the heading, its date, the fresh empty
+`Unreleased` and the link definitions at the foot of the file are written by
+`npm version` when the release is cut.
 
 ``` sh
 npm run publish:patch   # or publish:minor, publish:major
 ```
 
-Each script runs `npm version`, which bumps the version, commits it and tags it.
-The `postversion` hook then pushes the commit and the tag, and publishes last.
+Each script runs `npm version`, which checks that the release may be cut at all,
+closes the changelog, bumps the version, commits, tags, and pushes the commit
+and the tag. The tag is what publishes: it starts
+[`.github/workflows/release.yml`](.github/workflows/release.yml), which runs the
+tests again, publishes to npm and opens a GitHub release with that version's
+changelog section as its body.
 
-The order matters and it is deliberate. The default branch is protected, so a
-push can be rejected; if the publish ran first, that would leave a version on
-npm with no commit or tag behind it, and a published version number can never
-be reused. Pushing first makes the failure recoverable in both directions: a
-rejected push means nothing was published, and a tag that got pushed while the
-publish failed just needs `npm publish` again.
+Publishing from a runner rather than from a laptop is deliberate. The package is
+made of files consumers copy into their own repositories and compare byte for
+byte, and until 2.0.2 what went out depended on the machine it was cut from — a
+Windows checkout put CRLF into a release that the repository itself never held.
 
-For the same reason, the account publishing a release needs a bypass entry in
-the branch ruleset — otherwise `postversion` stops at the push and the release
-never goes out.
+The workflow carries no npm token: it authenticates as itself over OIDC, which
+npm calls trusted publishing, and that is configured once on the package's
+settings page on npmjs.com. [CONTRIBUTING.md](CONTRIBUTING.md) has the details,
+including what to do when a publish fails after the tag is already pushed.

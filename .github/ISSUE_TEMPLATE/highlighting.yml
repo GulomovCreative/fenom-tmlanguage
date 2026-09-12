@@ -1,0 +1,37 @@
+name: Highlighting problem
+description: Something is coloured wrong, or not at all
+labels: [bug]
+body:
+  - type: textarea
+    id: snippet
+    attributes:
+      label: The template code
+      description: The smallest snippet that shows the problem.
+      render: html
+      placeholder: "{foreach $items as $item}{$item.name|upper}{/foreach}"
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected, and what you got
+      description: >
+        Which part is coloured wrong. A screenshot helps. If the surrounding
+        HTML, CSS or JavaScript is affected too, say so — this grammar is an
+        injection over HTML, and that is where it can go wrong at a distance.
+    validations:
+      required: true
+  - type: input
+    id: editor
+    attributes:
+      label: Editor and theme
+      placeholder: VS Code 1.9x, Default Dark Modern
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Package version
+      placeholder: 2.1.0
+    validations:
+      required: true
