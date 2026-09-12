@@ -1,6 +1,6 @@
 {
   "name": "@gulomov/fenom-tmlanguage",
-  "version": "2.0.2",
+  "version": "2.1.0",
   "description": "TextMate grammar for the Fenom template engine, injected over HTML so markup, CSS and JavaScript keep their own highlighting",
   "author": {
     "name": "Gulomov Bakhtovar",
