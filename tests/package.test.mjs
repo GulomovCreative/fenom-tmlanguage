@@ -185,15 +185,18 @@ test('the manifest carries the fields npm builds the package page from', () => {
   assert.ok(repository.length > 0)
 })
 
-test('LICENSE is present and carries a copyright line', () => {
-  // The licence is published in every release and almost never opened, so the
-  // one thing worth holding is that it is still there and still readable.
-  //
-  // The name in it is deliberately not compared with package.json: the
-  // copyright is held by the author of the work the grammar came from, which
-  // is not the person publishing the package.
+test('LICENSE names both copyright holders', () => {
+  // Two names, and both have to stay. The grammar started as a copy of Modix
+  // GmbH's, and MIT requires their notice to be kept in anything derived from
+  // it; the second line covers everything written here since. Dropping either
+  // is a licensing mistake that nothing else in the repository would catch.
   const license = fs.readFileSync(path.join(root, 'LICENSE'), 'utf8')
-  assert.match(license, /^Copyright \(c\) \d{4} \S/m, 'the copyright line is not in the expected shape')
+
+  assert.match(license, /^Copyright \(c\) 2020 Modix GmbH/m, 'the original copyright notice is gone')
+  assert.ok(
+    license.includes(packageJson.author.name),
+    'LICENSE does not name the author from package.json: ' + packageJson.author.name
+  )
   assert.match(license, /MIT/, 'LICENSE is not the MIT text the manifest declares')
   assert.equal(packageJson.license, 'MIT')
 })
