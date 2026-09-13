@@ -19,6 +19,7 @@ import { gunzipSync } from 'node:zlib'
 import { mkdtempSync, readFileSync, rmSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
+import { packEntries } from './npm-pack.mjs'
 
 const BLOCK = 512
 
@@ -76,7 +77,7 @@ let failures = []
 let checked = 0
 
 try {
-  const [{ filename }] = JSON.parse(pack(destination))
+  const [{ filename }] = packEntries(pack(destination))
   const archive = gunzipSync(readFileSync(join(destination, filename)))
 
   for (const { name, content } of tarEntries(archive)) {
