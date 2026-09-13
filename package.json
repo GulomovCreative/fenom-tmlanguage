@@ -23,11 +23,15 @@
     "access": "public"
   },
   "scripts": {
-    "test": "npm run test:grammar && npm run test:readme && npm run test:release && npm run test:indentation && npm run test:snapshots && npm run test:nesting && npm run test:line-endings && npm run test:package",
+    "test": "npm run test:grammar && npm run test:readme && npm run test:release && npm run test:indentation && npm run test:snapshots && npm run test:nesting && npm run test:preview && npm run test:fuzz && npm run test:performance && npm run test:line-endings && npm run test:package",
     "test:grammar": "node tests/grammar-file.test.mjs",
     "test:readme": "node --test tests/readme.test.mjs",
     "test:release": "node --test tests/release.test.mjs",
     "test:package": "node --test tests/package.test.mjs",
+    "test:preview": "node --test tests/preview.test.mjs",
+    "test:fuzz": "node --test tests/fuzz.test.mjs",
+    "test:performance": "node --test tests/performance.test.mjs",
+    "preview:update": "node scripts/theme-preview.mjs",
     "test:indentation": "node tests/indentation.test.mjs",
     "test:line-endings": "node tests/line-endings.test.mjs",
     "test:snapshots": "vscode-tmgrammar-snap -g fenom.tmLanguage.json -g tests/html-derivative.stub.tmLanguage.json -s text.html.fenom \"tests/**/*.tpl\"",
@@ -56,6 +60,9 @@
     "tpl"
   ],
   "license": "MIT",
+  "engines": {
+    "node": ">=12"
+  },
   "devDependencies": {
     "shiki": "^4.4.3",
     "vscode-tmgrammar-test": "^0.1.3"

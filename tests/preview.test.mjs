@@ -1,0 +1,54 @@
+// The committed previews, and what they are evidence of.
+//
+// The first test is the ordinary snapshot check: the SVGs in docs/ are what the
+// current grammar and themes produce. The second is the reason they exist -- a
+// scope can pass every other check here and still be invisible, because no
+// theme targets it. Colour is the only thing that shows that, and it is what
+// the reader of the README is looking at.
+
+import fs from 'node:fs'
+import test from 'node:test'
+import assert from 'node:assert/strict'
+import { renderAll, themes, svgPathFor, samplePath } from '../scripts/theme-preview.mjs'
+import { fenomHighlighter, ownScopes, tokenizeToScopes } from './highlighter.mjs'
+
+const rendered = await renderAll()
+const highlighter = await fenomHighlighter()
+
+test('the committed previews match what the grammar renders now', () => {
+  for (const theme of themes) {
+    const file = svgPathFor(theme)
+    assert.ok(fs.existsSync(file), 'docs/preview-' + theme + '.svg is missing — run npm run preview:update')
+    assert.equal(
+      fs.readFileSync(file, 'utf8'),
+      rendered[theme],
+      'the preview for ' + theme + ' is out of date. If the change is intended, run npm run preview:update ' +
+        'and read the diff — it is the colour of every token in the sample'
+    )
+  }
+})
+
+test('the themes give the grammar more than one colour', () => {
+  for (const theme of themes) {
+    const fills = new Set(rendered[theme].match(/fill="[^"]+"/g))
+    // One of them is the background. Fewer than five on top of it would mean
+    // the tags render as undifferentiated text, whatever the scope names say.
+    assert.ok(
+      fills.size >= 6,
+      theme + ' rendered ' + fills.size + ' distinct colours — the scopes are not being styled'
+    )
+  }
+})
+
+test('the sample exercises a broad part of the grammar', () => {
+  // A preview of two constructs would pass the checks above and show nothing.
+  const scopes = new Set()
+  for (const line of tokenizeToScopes(highlighter, fs.readFileSync(samplePath, 'utf8'))) {
+    for (const token of line) for (const scope of ownScopes(token)) scopes.add(scope)
+  }
+
+  assert.ok(
+    scopes.size >= 12,
+    'the sample only reaches ' + scopes.size + ' scopes: ' + [...scopes].sort().join(', ')
+  )
+})

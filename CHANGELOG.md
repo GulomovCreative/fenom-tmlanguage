@@ -7,6 +7,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- The README shows what the grammar looks like. The images in `docs/` are
+  generated from a sample template through GitHub's light and dark themes, and a
+  test fails when they drift. They are also the only check here that can see a
+  scope no theme colours — the naming and README checks confirm a scope is
+  well-formed and documented, not that anything styles it.
+- A time budget on tokenization, over deliberately awkward input. These patterns
+  run in the editor on every keystroke; a pattern that backtracks
+  catastrophically stops the editor rather than colouring anything wrongly, and
+  no fixture would ever show it.
+- Fuzz checks over generated templates, holding two rules this grammar has
+  broken before: markup carrying no tag stays with the host grammar, and a
+  closed tag does not colour what follows it.
+- A **Cut a release** workflow: choosing patch, minor or major on the Actions
+  tab now does everything `npm version` does locally. The command-line route is
+  unchanged.
+- `engines` declares the minimum Node version, as the manifest of the sibling
+  grammar already did.
+
 ## [2.1.1] — 2026-09-13
 
 ### Fixed

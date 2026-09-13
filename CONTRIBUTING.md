@@ -61,6 +61,15 @@ The suites come in layers, and a change usually touches more than one:
   `exports` map. They also pin down which files are published.
 - **Release checks** (`tests/release.test.mjs`) cover the scripts that guard and
   prepare a release.
+- **Preview checks** (`tests/preview.test.mjs`) re-render `docs/preview.tpl`
+  through real editor themes and compare the result with the committed SVGs.
+  Run `npm run preview:update` after an intended change and read the diff.
+- **The performance guard** (`tests/performance.test.mjs`) holds tokenization of
+  awkward input to a time budget. A pattern that backtracks catastrophically
+  stops the editor rather than colouring anything wrongly.
+- **Fuzz checks** (`tests/fuzz.test.mjs`) generate templates from a fixed seed
+  and hold two rules: markup carrying no tag stays with the host grammar, and a
+  closed tag does not colour what follows. `FUZZ_SEED` re-runs a failing set.
 
 The workflow:
 
@@ -98,11 +107,16 @@ begins and ends — say what could regress and what you did to rule it out.
 
 ## Releasing
 
-Releases go out from `master` with one command:
+Releases go out from `master` either from the Actions tab — run the **Cut a
+release** workflow and choose patch, minor or major — or with one command:
 
 ``` sh
 npm run publish:patch   # or publish:minor / publish:major
 ```
+
+Both do the same work; the workflow simply does it on a runner. It needs the
+account Actions push as to be allowed to push to `master`, which on a protected
+branch means a bypass entry in the ruleset.
 
 That runs `npm version`, which bumps `package.json`, closes the changelog,
 commits, tags and pushes. Publishing itself happens in GitHub Actions: the
