@@ -11,6 +11,20 @@ The grammar is an injection over HTML: markup in a `.tpl` file is highlighted by
 the editor's own HTML grammar — including CSS in `<style>` and JavaScript in
 `<script>` — and Fenom tags are highlighted on top of it, wherever they appear.
 
+## What it looks like
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/preview-github-dark.svg">
+  <img alt="A Fenom template highlighted by this grammar: tags, variables, modifiers and comments each coloured differently, with the surrounding HTML highlighted by the editor's own grammar" src="docs/preview-github-light.svg">
+</picture>
+
+The sample is [`docs/preview.tpl`](docs/preview.tpl), rendered with GitHub's own
+light and dark themes. Both images are generated — `npm run preview:update`
+rewrites them — and a test fails if they drift from what the grammar currently
+produces. That check earns its place: a scope can be spelled correctly and
+documented and still be coloured by nothing at all, because no theme targets it,
+and only rendering through a real theme shows that.
+
 ## Installation
 
 ``` sh
@@ -201,7 +215,7 @@ for the same character.
 
 ## Development
 
-The grammar is covered by eight test suites.
+The grammar is covered by eleven test suites.
 
 **Grammar file checks.** `tests/grammar-file.test.mjs` checks that the grammar
 and the language configuration parse and carry no duplicate keys — `JSON.parse`
@@ -254,8 +268,27 @@ section is closed into a version. Both run at moments that are awkward to
 reach on purpose, so what can be decided from text alone lives in pure
 functions and is tested here.
 
+**Preview checks.** `tests/preview.test.mjs` re-renders the sample in
+[`docs/`](docs/) through real editor themes and compares it with the committed
+SVGs. It is the only suite that can see a scope no theme colours: the naming and
+README checks confirm that a scope is well-formed and documented, not that any
+theme targets it.
+
+**Performance guard.** `tests/performance.test.mjs` tokenizes deliberately
+awkward input — long operator chains, unterminated strings, hundreds of tags on
+one line — under a loose time budget. These patterns run in the editor on every
+keystroke, and a regex that backtracks catastrophically does not produce a wrong
+colour, it stops the editor.
+
+**Fuzz checks.** `tests/fuzz.test.mjs` generates templates from a fixed seed and
+holds the grammar to two rules it has broken before: markup that carries no tag
+is left entirely to the host grammar, and a closed tag does not colour what
+follows it. Fixtures cannot cover this, because a fixture is written by someone
+who already knows the failing case.
+
 ``` sh
-npm test             # all eight suites
+npm test             # all eleven suites
+npm run preview:update  # re-render the theme previews after a grammar change
 npm run test:update  # rewrite the snapshots after an intentional change
 ```
 
