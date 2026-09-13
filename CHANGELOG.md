@@ -21,9 +21,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fuzz checks over generated templates, holding two rules this grammar has
   broken before: markup carrying no tag stays with the host grammar, and a
   closed tag does not colour what follows it.
-- A **Cut a release** workflow: choosing patch, minor or major on the Actions
-  tab now does everything `npm version` does locally. The command-line route is
-  unchanged.
 - `engines` declares the minimum Node version, as the manifest of the sibling
   grammar already did.
 
