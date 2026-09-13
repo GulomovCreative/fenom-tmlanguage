@@ -18,6 +18,7 @@ import test from 'node:test'
 import assert from 'node:assert/strict'
 import { execFileSync, execSync } from 'node:child_process'
 import { fileURLToPath } from 'node:url'
+import { packEntries } from './npm-pack.mjs'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const packageJson = JSON.parse(fs.readFileSync(path.join(root, 'package.json'), 'utf8'))
@@ -75,7 +76,7 @@ const publishedFiles = [
 ]
 
 test('the tarball holds exactly the expected files', () => {
-  const [tarball] = JSON.parse(npm(['pack', '--dry-run', '--json', '--ignore-scripts']))
+  const [tarball] = packEntries(npm(['pack', '--dry-run', '--json', '--ignore-scripts']))
   const actual = tarball.files.map((file) => file.path).sort()
 
   assert.deepEqual(
@@ -199,4 +200,36 @@ test('LICENSE names both copyright holders', () => {
   )
   assert.match(license, /MIT/, 'LICENSE is not the MIT text the manifest declares')
   assert.equal(packageJson.license, 'MIT')
+})
+
+// --- Reading npm pack --json ------------------------------------------------
+
+test('the pack output is read in both of the shapes npm prints', () => {
+  // npm 11 and earlier print an array; npm 12 prints an object keyed by
+  // package name. The release workflow runs the newest npm and everyone else
+  // runs an older one, so both shapes reach this code -- and the mismatch is
+  // what stopped the first release before it published anything.
+  const entry = { id: 'p@1.0.0', filename: 'p-1.0.0.tgz', files: [{ path: 'index.js' }] }
+
+  const fromArray = packEntries(JSON.stringify([entry]))
+  const fromObject = packEntries(JSON.stringify({ p: entry }))
+
+  assert.deepEqual(fromArray, [entry])
+  assert.deepEqual(fromObject, [entry])
+  assert.deepEqual(fromArray, fromObject, 'the two shapes must read the same')
+})
+
+test('a pack output that is neither shape is an error, not an empty list', () => {
+  // Returning [] here would turn a broken npm invocation into a passing test
+  // that checked nothing.
+  assert.throws(() => packEntries('"a string"'), TypeError)
+  assert.throws(() => packEntries('42'), TypeError)
+})
+
+test('the real npm on this machine is read correctly', () => {
+  // The unit tests above use hand-written output. This one runs the npm that
+  // is actually installed, whichever shape it prints.
+  const [tarball] = packEntries(npm(['pack', '--dry-run', '--json', '--ignore-scripts']))
+  assert.equal(typeof tarball.filename, 'string')
+  assert.ok(Array.isArray(tarball.files), 'no file list in the pack output')
 })
