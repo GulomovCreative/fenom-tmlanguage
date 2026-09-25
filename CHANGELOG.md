@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.1.3] — 2026-09-25
+
 ### Added
 
 - The README covers Shiki, including which HTML grammar to embed.
@@ -262,7 +264,8 @@ Published as `fenom-tmlanguage`, the last release under that name.
 Initial release, published as `fenom-tmlanguage`. It was never tagged in git, so
 the link below points at the commit it was cut from.
 
-[Unreleased]: https://github.com/GulomovCreative/fenom-tmlanguage/compare/v2.1.2...HEAD
+[Unreleased]: https://github.com/GulomovCreative/fenom-tmlanguage/compare/v2.1.3...HEAD
+[2.1.3]: https://github.com/GulomovCreative/fenom-tmlanguage/compare/v2.1.2...v2.1.3
 [2.1.2]: https://github.com/GulomovCreative/fenom-tmlanguage/compare/v2.1.1...v2.1.2
 [2.1.1]: https://github.com/GulomovCreative/fenom-tmlanguage/compare/v2.1.0...v2.1.1
 [2.1.0]: https://github.com/GulomovCreative/fenom-tmlanguage/compare/v2.0.2...v2.1.0
