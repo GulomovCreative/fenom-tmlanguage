@@ -22,11 +22,15 @@
     }
   },
   "patterns": [
-    { "include": "text.html.derivative" }
+    { "include": "text.html.derivative" },
+    {
+      "comment": "Fallback for hosts that load only the plain HTML grammar, as a Shiki setup with embeddedLangs: ['html'] does. An include of a grammar that is not loaded resolves to nothing, so without this the markup is left unhighlighted. When text.html.derivative is loaded it takes precedence: TextMate takes the earliest match and breaks ties by list order, and derivative matches everywhere basic would -- the one rule basic adds, for invalid tags, starts where derivative's catch-all tag rule does, and derivative is listed first. The {ignore} and :ignore rules include the host the same way.",
+      "include": "text.html.basic"
+    }
   ],
   "repository": {
     "ignore": {
-      "comment": "Everything between {ignore} and {/ignore} is emitted verbatim, so Fenom syntax inside it must not be highlighted. A begin/end rule takes over its whole region, which would leave the contents unhighlighted altogether, so the host grammar is included back explicitly -- that is what keeps the <style> element in the documented {ignore} example rendering as CSS. The content is scoped meta.embedded.literal, which this grammar's injection selector excludes, so Fenom itself does not come back with it. Comments are the one exception: Fenom's lexer handles {* *} in an earlier branch than the ignore flag, so they are still stripped inside an ignore block and are still highlighted here.",
+      "comment": "Everything between {ignore} and {/ignore} is emitted verbatim, so Fenom syntax inside it must not be highlighted. A begin/end rule takes over its whole region, which would leave the contents unhighlighted altogether, so the host HTML grammar is included back explicitly (text.html.derivative, or text.html.basic where only that is loaded, as at the top level) -- that is what keeps the <style> element in the documented {ignore} example rendering as CSS. The content is scoped meta.embedded.literal, which this grammar's injection selector excludes, so Fenom itself does not come back with it. Comments are the one exception: Fenom's lexer handles {* *} in an earlier branch than the ignore flag, so they are still stripped inside an ignore block and are still highlighted here.",
       "begin": "(\\{)(ignore)(\\})",
       "beginCaptures": {
         "1": { "name": "punctuation.section.embedded.begin.fenom" },
@@ -47,6 +51,9 @@
         },
         {
           "include": "text.html.derivative"
+        },
+        {
+          "include": "text.html.basic"
         }
       ]
     },
@@ -74,6 +81,9 @@
         },
         {
           "include": "text.html.derivative"
+        },
+        {
+          "include": "text.html.basic"
         }
       ]
     },

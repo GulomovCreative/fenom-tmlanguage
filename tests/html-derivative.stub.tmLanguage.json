@@ -2,6 +2,6 @@
   "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
   "name": "HTML derivative stub",
   "scopeName": "text.html.derivative",
-  "comment": "Empty stand-in for the HTML grammar that fenom.tmLanguage.json includes. Tests assert the Fenom injection only, so the base grammar is stubbed out to keep snapshots free of churn from VS Code's bundled HTML grammar.",
+  "comment": "Empty stand-in for the preferred HTML grammar that fenom.tmLanguage.json includes; text.html.basic, the fallback, is stubbed separately in html-basic.stub.tmLanguage.json. Tests assert the Fenom injection only, so the base grammar is stubbed out to keep snapshots free of churn from VS Code's bundled HTML grammar.",
   "patterns": []
 }

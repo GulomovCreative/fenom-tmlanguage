@@ -102,6 +102,27 @@ JSON, YAML and Property List. See
 [Syntax Definitions](https://www.sublimetext.com/docs/syntax.html) for which
 formats are supported.
 
+### Shiki
+
+Register the grammar as a language, and load the HTML grammar it sits on as
+well as naming it in `embeddedLangs` — Shiki refuses a language whose
+embedded one is not loaded:
+
+``` js
+import { createHighlighter } from 'shiki'
+import fenom from '@gulomov/fenom-tmlanguage/fenom.tmLanguage.json' with { type: 'json' }
+
+const highlighter = await createHighlighter({
+  themes: ['github-light'],
+  langs: ['html-derivative', { ...fenom, name: 'fenom', embeddedLangs: ['html-derivative'] }],
+})
+```
+
+`html-derivative` is the better host: it is what VS Code uses, and it leaves a
+tag it cannot parse, such as `<div{$x}>`, as an unrecognised tag rather than an
+illegal one. `embeddedLangs: ['html']` works too — the grammar falls back to the
+plain HTML grammar when the derivative one is not loaded.
+
 ### Atom
 
 Atom's grammar loader accepted this format, but GitHub archived Atom in December
@@ -220,7 +241,10 @@ The grammar is covered by eleven test suites.
 **Grammar file checks.** `tests/grammar-file.test.mjs` checks that the grammar
 and the language configuration parse and carry no duplicate keys — `JSON.parse`
 keeps the last of a repeated key and drops the earlier ones silently, which once
-left a rule with a comment that never applied.
+left a rule with a comment that never applied. It also checks that every
+include of the host HTML grammar names `text.html.derivative` with
+`text.html.basic` directly after it, the fallback the nesting tests cannot tell
+apart from the real thing.
 
 **Indentation tests.** `tests/indentation.test.mjs` runs VS Code's two-ended
 indentation rule — decrease against the line being typed, increase against the
@@ -231,8 +255,8 @@ part company.
 
 **Snapshot tests.** Each `tests/*.tpl` fixture has a matching `.snap` file
 recording the scope assigned to every token, so any change in highlighting shows
-up as a reviewable diff. They run against a stub of the HTML grammar, which
-keeps the snapshots free of churn from VS Code's bundled grammars.
+up as a reviewable diff. They run against stubs of the HTML grammars, which
+keep the snapshots free of churn from VS Code's bundled grammars.
 
 **Nesting tests.** `tests/nesting/` checks the grammar against a real HTML
 grammar with CSS and JavaScript nested inside it. This grammar is injected with
@@ -240,7 +264,9 @@ grammar with CSS and JavaScript nested inside it. This grammar is injected with
 grammar can see it — which is how a rule matching `{ ` once swallowed the brace
 that opens a CSS property list and left the rest of the document, `</style>`
 included, parsed as CSS. The snapshot suite cannot see that class of bug,
-because it stubs the HTML grammar out.
+because it stubs the HTML grammars out. Every check runs twice, over
+`html-derivative` and over the plain `html` grammar alone, because the grammar
+falls back from one to the other and each path has to hold.
 
 **Line ending tests.** `tests/line-endings.test.mjs` packs the tarball and reads
 the archived bytes back, checking every published file for CR. Consumers copy

@@ -76,10 +76,44 @@ for (const [name, source] of sources) {
   }
 }
 
+// Every place that includes the host HTML grammar lists text.html.derivative
+// and then text.html.basic straight after it, as the fallback for hosts that
+// load only the plain grammar. Shiki always loads basic alongside derivative,
+// so the nesting tests tokenize the same with or without the derivative
+// include and cannot tell whether it is there or in front; this can.
+const grammar = JSON.parse(sources.get('fenom.tmLanguage.json'));
+const hostIncludes = [];
+(function walk(node, where) {
+  if (Array.isArray(node)) return node.forEach((item, i) => walk(item, `${where}[${i}]`));
+  if (!node || typeof node !== 'object') return;
+  if (Array.isArray(node.patterns)) {
+    const includes = node.patterns.map((p) => p.include);
+    if (includes.some((include) => /^text\.html\./.test(include ?? ''))) {
+      hostIncludes.push({ where: `${where}.patterns`, includes });
+    }
+  }
+  for (const [key, value] of Object.entries(node)) walk(value, `${where}.${key}`);
+})(grammar, 'grammar');
+
+for (const { where, includes } of hostIncludes) {
+  const hosts = includes.filter((include) => /^text\.html\./.test(include ?? ''));
+  const at = includes.indexOf('text.html.derivative');
+  if (hosts.length !== 2 || at === -1 || includes[at + 1] !== 'text.html.basic') {
+    failures.push(
+      `${where} includes ${hosts.join(', ')} — the host must be text.html.derivative followed directly by text.html.basic`
+    );
+  }
+}
+if (hostIncludes.length === 0) {
+  failures.push('fenom.tmLanguage.json includes no host HTML grammar at all');
+}
+
 if (failures.length) {
   console.error(`\n${failures.length} grammar file check(s) failed:\n`);
   for (const failure of failures) console.error('  ' + failure + '\n');
   process.exit(1);
 }
 
-console.log(`✓ ${files.join(' and ')} are valid JSON with no duplicate keys.`);
+console.log(
+  `✓ ${files.join(' and ')} are valid JSON with no duplicate keys; ${hostIncludes.length} host HTML includes list derivative then basic.`
+);

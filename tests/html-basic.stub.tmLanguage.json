@@ -1,0 +1,7 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "HTML basic stub",
+  "scopeName": "text.html.basic",
+  "comment": "Empty stand-in for the plain HTML grammar that fenom.tmLanguage.json falls back to when text.html.derivative is not loaded. vscode-tmgrammar-snap loads only the grammars passed with -g, so without this stub it warns that the include is unresolved. It stays empty, like html-derivative.stub.tmLanguage.json, so the snapshots record only Fenom scopes.",
+  "patterns": []
+}

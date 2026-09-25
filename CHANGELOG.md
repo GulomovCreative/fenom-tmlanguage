@@ -7,6 +7,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- The README covers Shiki, including which HTML grammar to embed.
+- The nesting tests run every check twice, over `html-derivative` and over the
+  plain `html` grammar alone, and check that the body of a tag with `:ignore`
+  keeps its HTML highlighting rather than only that it carries no Fenom. The
+  grammar file checks hold every host include to derivative first, then basic.
+
+### Fixed
+
+- HTML markup is highlighted when the host loads only the plain HTML grammar,
+  as a Shiki setup with `embeddedLangs: ['html']` does. The grammar included
+  `text.html.derivative` alone, and an include of a grammar that is not loaded
+  resolves to nothing, so everything outside a Fenom tag came out plain. It now
+  falls back to `text.html.basic`; with the derivative grammar loaded nothing
+  changes.
+
 ## [2.1.2] — 2026-09-13
 
 ### Added

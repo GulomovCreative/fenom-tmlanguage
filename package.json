@@ -34,7 +34,7 @@
     "preview:update": "node scripts/theme-preview.mjs",
     "test:indentation": "node tests/indentation.test.mjs",
     "test:line-endings": "node tests/line-endings.test.mjs",
-    "test:snapshots": "vscode-tmgrammar-snap -g fenom.tmLanguage.json -g tests/html-derivative.stub.tmLanguage.json -s text.html.fenom \"tests/**/*.tpl\"",
+    "test:snapshots": "vscode-tmgrammar-snap -g fenom.tmLanguage.json -g tests/html-derivative.stub.tmLanguage.json -g tests/html-basic.stub.tmLanguage.json -s text.html.fenom \"tests/**/*.tpl\"",
     "test:nesting": "node tests/nesting/nesting.test.mjs",
     "test:update": "npm run test:snapshots -- --updateSnapshot",
     "publish:major": "npm version major",

@@ -44,11 +44,12 @@ The suites come in layers, and a change usually touches more than one:
   parse cleanly and then behave surprisingly — a duplicated key, which
   `JSON.parse` resolves silently by keeping the last one.
 - **Snapshots** (`tests/*.snap`) record how each fixture tokenizes. They are
-  generated, never hand-edited, and they run against a stub of the HTML grammar
+  generated, never hand-edited, and they run against stubs of the HTML grammars
   so that an update to a third-party grammar cannot rewrite every snapshot in
   the repository.
 - **Nesting tests** (`tests/nesting/`) run the grammar against a real HTML
-  grammar with CSS and JavaScript inside it. This is the only layer that can
+  grammar with CSS and JavaScript inside it, once over `html-derivative` and
+  once over the plain `html` grammar alone. This is the only layer that can
   see the injection eating something the host grammar needed.
 - **Indentation tests** (`tests/indentation.test.mjs`) re-indent a template
   from scratch and require the result to come back identical.
